@@ -1,15 +1,5 @@
-import styles from './loading.module.css'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 
-const Loading = () => (
-  <>
-    <div
-      className={styles.bar}
-      role="progressbar"
-      aria-busy="true"
-      aria-label="Loading page"
-    />
-    <span className={styles.srOnly}>Loading page</span>
-  </>
-)
+const Loading = () => <TopLoadingBar />
 
 export default Loading

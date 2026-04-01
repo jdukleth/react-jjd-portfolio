@@ -39,16 +39,17 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
         const Icon = iconFor(button.icon)
         if (button.type === 'link') {
           return (
-            <a
-              key={index}
-              href={button.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styles.btn} glassInteractive glassInteractiveRound`}
-              aria-label={button.url}
-            >
-              <Icon size={32} />
-            </a>
+            <span key={index} className={styles.cell}>
+              <a
+                href={button.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.btn} glassInteractive glassInteractiveRound`}
+                aria-label={button.url}
+              >
+                <Icon size={32} />
+              </a>
+            </span>
           )
         }
         if (button.type === 'phone') {
@@ -59,15 +60,16 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
             body: tagline,
           }
           return (
-            <button
-              key={index}
-              type="button"
-              className={`${styles.btn} glassInteractive glassInteractiveRound`}
-              aria-label="Phone"
-              onClick={() => setModal(payload)}
-            >
-              <Icon size={32} />
-            </button>
+            <span key={index} className={styles.cell}>
+              <button
+                type="button"
+                className={`${styles.btn} glassInteractive glassInteractiveRound`}
+                aria-label="Phone"
+                onClick={() => setModal(payload)}
+              >
+                <Icon size={32} />
+              </button>
+            </span>
           )
         }
         if (button.type === 'email') {
@@ -78,15 +80,16 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
             body: tagline,
           }
           return (
-            <button
-              key={index}
-              type="button"
-              className={`${styles.btn} glassInteractive glassInteractiveRound`}
-              aria-label="Email"
-              onClick={() => setModal(payload)}
-            >
-              <Icon size={32} />
-            </button>
+            <span key={index} className={styles.cell}>
+              <button
+                type="button"
+                className={`${styles.btn} glassInteractive glassInteractiveRound`}
+                aria-label="Email"
+                onClick={() => setModal(payload)}
+              >
+                <Icon size={32} />
+              </button>
+            </span>
           )
         }
         return null

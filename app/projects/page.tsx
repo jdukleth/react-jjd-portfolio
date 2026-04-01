@@ -2,6 +2,7 @@
 
 import { PageTitle } from '@/components/PageTitle'
 import { ProjectsBlocks } from '@/components/ProjectsBlocks'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 import { IconHammer } from '@/components/icons'
 import { usePortfolioStore } from '@/stores/usePortfolioStore'
 
@@ -14,7 +15,7 @@ const ProjectsPage = () => {
   }
 
   if (!projects) {
-    return <p style={{ textAlign: 'center', padding: '2rem' }}>Loading…</p>
+    return <TopLoadingBar />
   }
 
   return (

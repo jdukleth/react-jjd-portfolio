@@ -13,10 +13,12 @@
   -webkit-overflow-scrolling: touch;
   height: calc(100vh - 72px);
   padding: 2rem;
+  padding-bottom: calc(2rem + 100px);
 }
 
 @media (max-width: 599px) {
   .page {
     padding: 1rem;
+    padding-bottom: calc(1rem + 100px);
   }
 }

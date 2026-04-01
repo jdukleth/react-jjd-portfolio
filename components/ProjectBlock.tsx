@@ -5,12 +5,12 @@ import { useMemo, useState } from 'react'
 import { GalleryOverlay } from './GalleryOverlay'
 import styles from './ProjectBlock.module.css'
 import type { Project } from '@/stores/usePortfolioStore'
-import { gradientTextClass } from '@/lib/themeGradientClasses'
 import {
   isProjectCoverGif,
   isProjectCoverJpg,
   resolveGalleryImages,
 } from '@/lib/projectGallery'
+import { gradientTextClass } from '@/lib/themeGradientClasses'
 
 export const ProjectBlock = ({
   data,

@@ -2,6 +2,7 @@
 
 import { PageTitle } from '@/components/PageTitle'
 import { SkillsMasonry } from '@/components/SkillsMasonry'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 import { IconCodeTags } from '@/components/icons'
 import { usePortfolioStore } from '@/stores/usePortfolioStore'
 
@@ -14,7 +15,7 @@ const SkillsPage = () => {
   }
 
   if (!skills) {
-    return <p style={{ textAlign: 'center', padding: '2rem' }}>Loading…</p>
+    return <TopLoadingBar />
   }
 
   return (

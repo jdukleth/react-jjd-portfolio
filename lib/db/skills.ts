@@ -43,8 +43,8 @@ export const skills = [
         name: 'Socket.io'
       },
       {
-        logo: 'prisma.png',
-        name: 'Prisma'
+        logo: 'bun.png',
+        name: 'Bun'
       }
     ],
     uses: [
@@ -63,16 +63,16 @@ export const skills = [
     themeClass: 'gradient2',
     skillItems: [
       {
+        logo: 'mysql.png',
+        name: 'MySQL'
+      },
+      {
         logo: 'postgresql.png',
         name: 'PostgreSQL'
       },
       {
         logo: 'db2.png',
         name: 'DB2'
-      },
-      {
-        logo: 'mysql.png',
-        name: 'MySQL'
       }
     ],
     uses: [
@@ -92,16 +92,16 @@ export const skills = [
     themeClass: 'gradient3',
     skillItems: [
       {
+        logo: 'composer.png',
+        name: 'Custom MVC'
+      },
+      {
         logo: 'lumen.png',
         name: 'Laravel'
       },
       {
         logo: 'zend-framework.png',
         name: 'Zend Framework'
-      },
-      {
-        logo: 'apigility.png',
-        name: 'Apigility'
       }
     ],
     uses: [
@@ -201,10 +201,14 @@ export const skills = [
   },
   {
     name: 'Code Crafting',
-    logo: 'visual-code.png',
+    logo: 'cursor.png',
     years: '',
     themeClass: 'gradient3',
     skillItems: [
+      {
+        logo: 'cursor.png',
+        name: 'Cursor'
+      },
       {
         logo: 'visual-code.png',
         name: 'Visual Code'
@@ -212,10 +216,6 @@ export const skills = [
       {
         logo: 'command-line.png',
         name: 'Command Line'
-      },
-      {
-        logo: 'phpstorm.png',
-        name: 'JetBrains'
       }
     ],
     uses: [

@@ -27,50 +27,28 @@
   text-decoration: none;
   position: relative;
   isolation: isolate;
-  container-type: inline-size;
   overflow: hidden;
   border-radius: 0;
   transition:
-    transform 0.22s cubic-bezier(0.34, 1.45, 0.64, 1),
-    box-shadow 0.28s ease,
-    background 0.28s ease,
     filter 0.25s ease,
     backdrop-filter 0.28s ease,
-    -webkit-backdrop-filter 0.28s ease;
+    -webkit-backdrop-filter 0.28s ease,
+    background 0.28s ease;
 }
 
-.tab > * {
-  position: relative;
-  z-index: 1;
-}
-
-.tab > .nebulaRoot {
-  position: absolute;
-  z-index: 0;
-}
-
-.tab > .tabGlass {
-  position: absolute;
-  z-index: 0;
-}
-
+/* Glass layers — default shine; emphasized uses a punchier specular below */
 .tab::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: var(
-    --glass-shine,
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.42) 0%,
-      rgba(255, 255, 255, 0.08) 42%,
-      transparent 58%,
-      rgba(255, 255, 255, 0.12) 100%
-    )
-  );
+  background: var(--glass-shine);
   opacity: 0;
-  transition: opacity 0.32s ease;
+  transition:
+    opacity 0.28s ease,
+    background 0.28s ease,
+    backdrop-filter 0.28s ease,
+    -webkit-backdrop-filter 0.28s ease;
   pointer-events: none;
   z-index: 0;
 }
@@ -82,35 +60,32 @@
   border-radius: inherit;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
   opacity: 0;
-  transition: opacity 0.28s ease;
+  transition: opacity 0.24s ease, box-shadow 0.28s ease;
   pointer-events: none;
   z-index: 0;
-}
-
-.tab:active {
-  transform: translateY(0) scale(0.97);
-  filter: brightness(0.94);
-  box-shadow: var(
-    --glass-press-inset,
-    inset 0 3px 14px rgba(0, 0, 0, 0.45)
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
   );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 
-.tab:active::before {
-  opacity: 0.35;
-}
-
-.tabEmphasized:active::before,
-.tabEmphasized:active::after {
-  opacity: 0;
-}
-
-.tabEmphasized:active .tabGlass::before {
-  opacity: 0.32;
-}
-
-.tabEmphasized:active .tabGlass {
-  filter: brightness(0.98);
+.tab > * {
+  position: relative;
+  z-index: 1;
 }
 
 .tabInactive {
@@ -118,81 +93,62 @@
   color: #000;
 }
 
-.tabEmphasized.nameplateActive {
-  --tab-glow: var(--accent-4);
-}
-
-.tabEmphasized.skillsActive {
-  --tab-glow: var(--accent-3);
-}
-
-.tabEmphasized.projectsActive {
-  --tab-glow: var(--accent-2);
-}
-
-.tabEmphasized.resumeActive {
-  --tab-glow: var(--accent-1);
-}
-
+/* Emphasized — frost + blur live on ::before with a horizontal mask so edges fade to clear */
 .tabEmphasized {
-  background: transparent !important;
   z-index: 2;
   color: #000;
   cursor: pointer;
-  overflow: visible;
-  transform: translateY(-2px);
-  box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.28),
-    0 -8px 26px color-mix(in srgb, var(--tab-glow) 32%, transparent);
+  background: transparent !important;
+  filter: brightness(1.07) saturate(1.04);
 }
 
-.tabEmphasized::before,
-.tabEmphasized::after {
-  opacity: 0;
-}
-
-.tabGlass {
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  border-radius: inherit;
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
-  filter: brightness(1.06);
-  box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.11),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.06);
-}
-
-.tabGlass::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(
-    --glass-shine,
+.tabEmphasized::before {
+  opacity: 1;
+  background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.44) 0%,
-      rgba(255, 255, 255, 0.09) 40%,
-      transparent 55%,
-      rgba(255, 255, 255, 0.1) 100%
-    )
+      rgba(255, 255, 255, 0.56) 0%,
+      rgba(255, 255, 255, 0.16) 34%,
+      transparent 48%,
+      rgba(255, 255, 255, 0.11) 72%,
+      rgba(255, 255, 255, 0.22) 100%
+    ),
+    rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px) saturate(175%) contrast(1.02);
+  -webkit-backdrop-filter: blur(14px) saturate(175%) contrast(1.02);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
   );
-  opacity: 0.72;
-  pointer-events: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 
-.tabGlass::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  opacity: 0.95;
-  pointer-events: none;
+.tabEmphasized::after {
+  opacity: 1;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.48),
+    inset 0 -14px 32px rgba(0, 0, 0, 0.11);
+}
+
+.tab:active {
+  filter: brightness(0.94);
+}
+
+.tabEmphasized:active::before {
+  opacity: 0.42;
 }
 
 .tab.routeEmphasized {
@@ -204,398 +160,8 @@
   z-index: 1;
 }
 
-.nebulaRoot {
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  width: 100%;
-  height: clamp(72px, 48cqw, 120px);
-  margin-bottom: 0;
-  overflow: hidden;
-  pointer-events: none;
-  border-radius: 0;
-  isolation: isolate;
-}
-
-.nebulaLayer {
-  position: absolute;
-  left: 50%;
-  bottom: -12%;
-  width: 155%;
-  height: 130%;
-  transform: translateX(-50%);
-  transform-origin: 50% 100%;
-  pointer-events: none;
-  will-change: transform, opacity, filter;
-  mix-blend-mode: plus-lighter;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.nebulaLayer:nth-child(1) {
-  background-image:
-    radial-gradient(
-      ellipse 55% 38% at 50% 92%,
-      color-mix(in srgb, var(--tab-glow) 88%, #fff) 0%,
-      color-mix(in srgb, var(--tab-glow) 45%, transparent) 42%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 90% 55% at 48% 100%,
-      color-mix(in srgb, var(--tab-glow) 35%, transparent) 0%,
-      transparent 55%
-    );
-  filter: blur(clamp(10px, 3cqw, 18px)) saturate(1.35);
-  opacity: 0.55;
-  animation: nebula-rise-a 9.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-}
-
-.nebulaLayer:nth-child(2) {
-  background-image:
-    radial-gradient(
-      ellipse 42% 48% at 28% 88%,
-      color-mix(in srgb, var(--tab-glow) 72%, transparent) 0%,
-      color-mix(in srgb, var(--tab-glow) 28%, transparent) 50%,
-      transparent 78%
-    ),
-    radial-gradient(
-      ellipse 38% 44% at 78% 86%,
-      color-mix(in srgb, var(--tab-glow) 68%, transparent) 0%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 70% 40% at 52% 72%,
-      color-mix(in srgb, var(--tab-glow) 22%, transparent) 0%,
-      transparent 65%
-    );
-  filter: blur(clamp(14px, 4cqw, 24px)) saturate(1.2);
-  opacity: 0.4;
-  animation: nebula-rise-b 11.4s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite;
-  animation-delay: -2.1s;
-}
-
-.nebulaLayer:nth-child(3) {
-  background-image:
-    radial-gradient(
-      ellipse 18% 62% at 44% 90%,
-      color-mix(in srgb, #fff 25%, var(--tab-glow)) 0%,
-      color-mix(in srgb, var(--tab-glow) 55%, transparent) 35%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 22% 50% at 62% 78%,
-      color-mix(in srgb, var(--tab-glow) 50%, transparent) 0%,
-      transparent 68%
-    );
-  filter: blur(clamp(8px, 2.5cqw, 14px)) saturate(1.5);
-  opacity: 0.45;
-  animation: nebula-rise-c 7.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  animation-delay: -4.6s;
-}
-
-.nebulaLayer:nth-child(4) {
-  background-image:
-    radial-gradient(
-      ellipse 35% 28% at 40% 48%,
-      color-mix(in srgb, var(--tab-glow) 40%, transparent) 0%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 32% 26% at 58% 38%,
-      color-mix(in srgb, #fff 20%, var(--tab-glow)) 0%,
-      transparent 80%
-    ),
-    radial-gradient(
-      ellipse 24% 20% at 50% 22%,
-      color-mix(in srgb, var(--tab-glow) 25%, transparent) 0%,
-      transparent 85%
-    );
-  filter: blur(clamp(12px, 3.5cqw, 20px)) saturate(1.25);
-  opacity: 0.35;
-  animation: nebula-rise-d 10.1s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-  animation-delay: -1.3s;
-}
-
-.bar > :nth-child(1) .nebulaLayer:nth-child(1) {
-  animation-duration: 8.6s;
-  animation-delay: -0.4s;
-}
-
-.bar > :nth-child(1) .nebulaLayer:nth-child(2) {
-  animation-duration: 10.8s;
-  animation-delay: -2.7s;
-}
-
-.bar > :nth-child(1) .nebulaLayer:nth-child(3) {
-  animation-duration: 7.2s;
-  animation-delay: -3.1s;
-}
-
-.bar > :nth-child(1) .nebulaLayer:nth-child(4) {
-  animation-duration: 9.5s;
-  animation-delay: -0.9s;
-}
-
-.bar > :nth-child(2) .nebulaLayer:nth-child(1) {
-  animation-duration: 9.8s;
-  animation-delay: -1.2s;
-}
-
-.bar > :nth-child(2) .nebulaLayer:nth-child(2) {
-  animation-duration: 12s;
-  animation-delay: -3.4s;
-}
-
-.bar > :nth-child(2) .nebulaLayer:nth-child(3) {
-  animation-duration: 8.4s;
-  animation-delay: -5.2s;
-}
-
-.bar > :nth-child(2) .nebulaLayer:nth-child(4) {
-  animation-duration: 10.6s;
-  animation-delay: -2.1s;
-}
-
-.bar > :nth-child(3) .nebulaLayer:nth-child(1) {
-  animation-duration: 8.9s;
-  animation-delay: -2.5s;
-}
-
-.bar > :nth-child(3) .nebulaLayer:nth-child(2) {
-  animation-duration: 11.1s;
-  animation-delay: -1.8s;
-}
-
-.bar > :nth-child(3) .nebulaLayer:nth-child(3) {
-  animation-duration: 7.5s;
-  animation-delay: -4.2s;
-}
-
-.bar > :nth-child(3) .nebulaLayer:nth-child(4) {
-  animation-duration: 9.9s;
-  animation-delay: -0.6s;
-}
-
-.bar > :nth-child(4) .nebulaLayer:nth-child(1) {
-  animation-duration: 9.5s;
-  animation-delay: -1.7s;
-}
-
-.bar > :nth-child(4) .nebulaLayer:nth-child(2) {
-  animation-duration: 11.7s;
-  animation-delay: -4.1s;
-}
-
-.bar > :nth-child(4) .nebulaLayer:nth-child(3) {
-  animation-duration: 8.1s;
-  animation-delay: -2.9s;
-}
-
-.bar > :nth-child(4) .nebulaLayer:nth-child(4) {
-  animation-duration: 10.3s;
-  animation-delay: -3.6s;
-}
-
-@keyframes nebula-rise-a {
-  0% {
-    transform: translateX(-50%) translate(0, 18px) scale(1, 0.88);
-    opacity: 0.35;
-    filter: blur(clamp(10px, 3cqw, 18px)) saturate(1.2);
-  }
-
-  12% {
-    transform: translateX(-50%) translate(6px, 4px) scale(1.04, 0.96);
-    opacity: 0.58;
-  }
-
-  28% {
-    transform: translateX(-50%) translate(-9px, -22px) scale(0.97, 1.06);
-    opacity: 0.52;
-  }
-
-  44% {
-    transform: translateX(-50%) translate(11px, -44px) scale(1.08, 1.12);
-    opacity: 0.48;
-  }
-
-  61% {
-    transform: translateX(-50%) translate(-5px, -68px) scale(1.02, 1.18);
-    opacity: 0.38;
-  }
-
-  78% {
-    transform: translateX(-50%) translate(4px, -88px) scale(1.12, 1.05);
-    opacity: 0.22;
-  }
-
-  94% {
-    transform: translateX(-50%) translate(-2px, -102px) scale(1.15, 0.92);
-    opacity: 0.08;
-  }
-
-  100% {
-    transform: translateX(-50%) translate(0, 18px) scale(1, 0.88);
-    opacity: 0.35;
-    filter: blur(clamp(10px, 3cqw, 18px)) saturate(1.2);
-  }
-}
-
-@keyframes nebula-rise-b {
-  0% {
-    transform: translateX(-50%) translate(-4px, 24px) scale(1.1, 0.82);
-    opacity: 0.25;
-    filter: blur(clamp(14px, 4cqw, 24px)) saturate(1.15);
-  }
-
-  18% {
-    transform: translateX(-50%) translate(10px, -2px) scale(0.94, 1);
-    opacity: 0.42;
-  }
-
-  35% {
-    transform: translateX(-50%) translate(-12px, -32px) scale(1.06, 1.08);
-    opacity: 0.4;
-  }
-
-  52% {
-    transform: translateX(-50%) translate(7px, -58px) scale(0.98, 1.14);
-    opacity: 0.32;
-  }
-
-  69% {
-    transform: translateX(-50%) translate(-8px, -82px) scale(1.1, 1.02);
-    opacity: 0.2;
-  }
-
-  86% {
-    transform: translateX(-50%) translate(3px, -100px) scale(1.04, 0.95);
-    opacity: 0.1;
-  }
-
-  100% {
-    transform: translateX(-50%) translate(-4px, 24px) scale(1.1, 0.82);
-    opacity: 0.25;
-    filter: blur(clamp(14px, 4cqw, 24px)) saturate(1.15);
-  }
-}
-
-@keyframes nebula-rise-c {
-  0% {
-    transform: translateX(-50%) translate(8px, 14px) scale(0.92, 0.9) rotate(-2deg);
-    opacity: 0.32;
-    filter: blur(clamp(8px, 2.5cqw, 14px)) saturate(1.4);
-  }
-
-  15% {
-    transform: translateX(-50%) translate(-7px, -6px) scale(1.08, 1.02) rotate(1deg);
-    opacity: 0.55;
-  }
-
-  32% {
-    transform: translateX(-50%) translate(12px, -36px) scale(0.95, 1.1) rotate(-3deg);
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: translateX(-50%) translate(-10px, -54px) scale(1.04, 1.06) rotate(2deg);
-    opacity: 0.4;
-  }
-
-  67% {
-    transform: translateX(-50%) translate(5px, -76px) scale(1.1, 0.98) rotate(-1deg);
-    opacity: 0.28;
-  }
-
-  84% {
-    transform: translateX(-50%) translate(-4px, -94px) scale(0.98, 1.12) rotate(3deg);
-    opacity: 0.12;
-  }
-
-  100% {
-    transform: translateX(-50%) translate(8px, 14px) scale(0.92, 0.9) rotate(-2deg);
-    opacity: 0.32;
-    filter: blur(clamp(8px, 2.5cqw, 14px)) saturate(1.4);
-  }
-}
-
-@keyframes nebula-rise-d {
-  0% {
-    transform: translateX(-50%) translate(0, 28px) scale(1.15, 0.75);
-    opacity: 0.2;
-    filter: blur(clamp(12px, 3.5cqw, 20px)) saturate(1.1);
-  }
-
-  22% {
-    transform: translateX(-50%) translate(-14px, 2px) scale(0.9, 1.04);
-    opacity: 0.38;
-  }
-
-  40% {
-    transform: translateX(-50%) translate(9px, -28px) scale(1.12, 1.1);
-    opacity: 0.36;
-  }
-
-  58% {
-    transform: translateX(-50%) translate(-6px, -52px) scale(1, 1.08);
-    opacity: 0.28;
-  }
-
-  75% {
-    transform: translateX(-50%) translate(11px, -74px) scale(1.06, 1);
-    opacity: 0.16;
-  }
-
-  92% {
-    transform: translateX(-50%) translate(-3px, -96px) scale(1.14, 0.9);
-    opacity: 0.06;
-  }
-
-  100% {
-    transform: translateX(-50%) translate(0, 28px) scale(1.15, 0.75);
-    opacity: 0.2;
-    filter: blur(clamp(12px, 3.5cqw, 20px)) saturate(1.1);
-  }
-}
-
-.tab.tabEmphasized:active .nebulaLayer {
-  opacity: 0.22;
-  animation-play-state: paused;
-  filter: blur(clamp(12px, 3.5cqw, 22px)) saturate(1.1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nebulaLayer {
-    animation: none !important;
-  }
-
-  .nebulaLayer:nth-child(1) {
-    transform: translateX(-50%) translate(0, -20px) scale(1, 1.02);
-    opacity: 0.45;
-  }
-
-  .nebulaLayer:nth-child(2) {
-    transform: translateX(-50%) translate(4px, -36px) scale(1.05, 1.04);
-    opacity: 0.32;
-  }
-
-  .nebulaLayer:nth-child(3) {
-    transform: translateX(-50%) translate(-6px, -28px) scale(1, 1.06);
-    opacity: 0.38;
-  }
-
-  .nebulaLayer:nth-child(4) {
-    transform: translateX(-50%) translate(2px, -48px) scale(1.08, 0.98);
-    opacity: 0.22;
-  }
-
-  .tab.tabEmphasized:active .nebulaLayer {
-    animation-play-state: unset;
-  }
-}
-
 .tab:focus-visible {
-  outline: 2px solid rgba(180, 230, 255, 0.9);
-  outline-offset: -2px;
+  outline: 2px solid rgba(120, 220, 255, 0.75);
+  outline-offset: 3px;
   z-index: 2;
 }
-

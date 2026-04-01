@@ -3,6 +3,7 @@
 import { HomeView } from '@/components/HomeView'
 import { Logo } from '@/components/Logo'
 import { Nameplate } from '@/components/Nameplate'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 import { usePortfolioStore } from '@/stores/usePortfolioStore'
 
 const HomePage = () => {
@@ -14,7 +15,7 @@ const HomePage = () => {
   }
 
   if (!nameplate) {
-    return <p style={{ textAlign: 'center', padding: '2rem' }}>Loading…</p>
+    return <TopLoadingBar />
   }
 
   return (

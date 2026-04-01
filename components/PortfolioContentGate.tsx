@@ -2,6 +2,7 @@
 
 import styles from './PortfolioContentGate.module.css'
 import type { LoadState } from '@/stores/usePortfolioStore'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 
 export const PortfolioContentGate = ({
   loadState,
@@ -13,10 +14,14 @@ export const PortfolioContentGate = ({
   children: React.ReactNode;
 }) => {
   if (loadState === 'error') {
-    return <p className={styles.message}>Could not load content.</p>
+    return (
+      <p className={styles.message} suppressHydrationWarning>
+        Could not load content.
+      </p>
+    )
   }
   if (!ready) {
-    return <p className={styles.message}>Loading…</p>
+    return <TopLoadingBar />
   }
   return children
 }

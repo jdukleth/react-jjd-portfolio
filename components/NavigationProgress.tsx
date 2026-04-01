@@ -9,7 +9,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import loadingStyles from '@/app/loading.module.css'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 
 const MIN_MS = 750
 
@@ -80,17 +80,7 @@ export const NavigationProgressProvider = ({
 
   return (
     <NavigationIntentContext.Provider value={{ onNavIntent }}>
-      {visible ? (
-        <>
-          <div
-            className={loadingStyles.bar}
-            role="progressbar"
-            aria-busy="true"
-            aria-label="Loading page"
-          />
-          <span className={loadingStyles.srOnly}>Loading page</span>
-        </>
-      ) : null}
+      {visible ? <TopLoadingBar /> : null}
       {children}
     </NavigationIntentContext.Provider>
   )

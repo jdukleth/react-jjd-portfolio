@@ -2,6 +2,7 @@
 
 import styles from './resume.module.css'
 import { PageTitle } from '@/components/PageTitle'
+import { TopLoadingBar } from '@/components/TopLoadingBar'
 import { IconBriefcase } from '@/components/icons'
 import { usePortfolioStore } from '@/stores/usePortfolioStore'
 
@@ -14,7 +15,7 @@ const ResumePage = () => {
   }
 
   if (!resume) {
-    return <p style={{ textAlign: 'center', padding: '2rem' }}>Loading…</p>
+    return <TopLoadingBar />
   }
 
   return (

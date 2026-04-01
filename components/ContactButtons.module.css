@@ -1,21 +1,42 @@
 .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  /* 2×2 below breakpoint, 4 across when wide; 15px gaps, grid centered in the row */
+  --cb-gap: 15px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 88px);
   justify-content: center;
-  gap: 0.25rem;
-  /* Vertical spacing from nameplate .root gap only */
+  align-content: center;
+  gap: var(--cb-gap);
+  width: 100%;
+  max-width: 100%;
   margin-top: 0;
+}
+
+@media (min-width: 32rem) {
+  .row {
+    grid-template-columns: repeat(4, 88px);
+  }
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1.25rem;
-  /* Was 28px padding → 88px circle with 32px icons; −5px diameter → 25.5px padding */
-  padding: 25.5px;
+  box-sizing: border-box;
+  margin: 0;
+  flex: 0 0 auto;
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
+  min-height: 88px;
+  padding: 0;
   border: none;
   background: rgba(255, 255, 255, 0.04);
   color: slategray;

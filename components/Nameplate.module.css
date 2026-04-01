@@ -41,7 +41,7 @@
 .supplemental {
   margin: 0;
   line-height: 1.45;
-  font-size: 1em;
+  font-size: calc(1em + 2px);
   color: slategray;
   letter-spacing: 0.1em;
 }
