@@ -21,7 +21,7 @@
 }
 
 .title a {
-  font-size: 1em;
+  font-size: calc(1em + 6px);
   color: var(--accent-2);
 }
 

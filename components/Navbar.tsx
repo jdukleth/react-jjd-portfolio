@@ -53,12 +53,20 @@ export const Navbar = () => {
             aria-current={routeActive ? 'page' : undefined}
             onClick={() => {
               if (!routeActive) onNavIntent()
+              queueMicrotask(() => {
+                document.getElementById('main-scroll')?.focus({
+                  preventScroll: true,
+                })
+              })
             }}
             onMouseEnter={() => setHoveredHref(href)}
             className={`${styles.tab} ${emphasized ? styles.tabEmphasized : styles.tabInactive} ${routeActive && emphasized ? styles.routeEmphasized : ''}`}
           >
-            <span className={styles.tabLabel}>{label}</span>
-            <Icon size={22} />
+            <span className={styles.tabCluster}>
+              <span className={styles.glassPanel} aria-hidden />
+              <Icon size={22} />
+              <span className={styles.tabLabel}>{label}</span>
+            </span>
           </Link>
         )
       })}

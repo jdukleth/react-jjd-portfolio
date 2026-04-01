@@ -11,7 +11,7 @@ import {
 } from 'react'
 import { TopLoadingBar } from '@/components/TopLoadingBar'
 
-const MIN_MS = 750
+const MIN_MS = 500
 
 type NavigationIntentValue = {
   onNavIntent: () => void

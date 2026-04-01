@@ -7,15 +7,15 @@ export const skills = [
     skillItems: [
       {
         logo: 'react.png',
-        name: 'React / Next'
-      },
-      {
-        logo: 'vue.png',
-        name: 'Vue / Nuxt'
+        name: 'React / Next.js'
       },
       {
         logo: 'jquery.png',
         name: 'jQuery'
+      },
+      {
+        logo: 'vue.png',
+        name: 'Vue / Nuxt.js'
       }
     ],
     uses: [
@@ -96,12 +96,12 @@ export const skills = [
         name: 'Custom MVC'
       },
       {
-        logo: 'lumen.png',
+        logo: 'laravel.svg',
         name: 'Laravel'
       },
       {
-        logo: 'zend-framework.png',
-        name: 'Zend Framework'
+        logo: 'symfony.svg',
+        name: 'Symfony'
       }
     ],
     uses: [
@@ -115,57 +115,29 @@ export const skills = [
     ]
   },
   {
-    name: 'Source Control',
+    name: 'Agile DevOps',
     logo: 'git.png',
     years: '',
     themeClass: 'gradient4',
     skillItems: [
       {
+        logo: 'github.png',
+        name: 'GitHub Actions'
+      },
+      {
         logo: 'git.png',
         name: 'Git'
       },
       {
-        logo: 'github.png',
-        name: 'GitHub'
-      },
-      {
-        logo: 'github.png',
-        name: 'GitHub Actions'
+        logo: 'jira.svg',
+        name: 'Jira'
       }
     ],
     uses: [
-      'company modernization with Git being the 1st step',
+      'GitHub Actions for CI/CD',
+      'Jira for planning, boards, and delivery tracking',
       '32 repos managed at once on the job',
       'comfortable following or setting in-house Git workflows'
-    ]
-  },
-  {
-    name: 'Design & Code',
-    logo: 'photoshop.png',
-    years: '',
-    themeClass: 'gradient1',
-    skillItems: [
-      {
-        logo: 'html.png',
-        name: 'HTML'
-      },
-      {
-        logo: 'css.png',
-        name: 'CSS'
-      },
-      {
-        logo: 'photoshop.png',
-        name: 'Photoshop'
-      }
-    ],
-    uses: [
-      'Photoshop layout design',
-      'responsive, mobile-friendly CSS',
-      'advanced CSS techniques',
-      'search engine optimization (SEO)',
-      'resource/request optimization',
-      'image manipulation',
-      'accessibility'
     ]
   },
   {
@@ -200,22 +172,59 @@ export const skills = [
     ]
   },
   {
+    name: 'Design & Code',
+    logo: 'photoshop.png',
+    years: '',
+    themeClass: 'gradient1',
+    skillItems: [
+      {
+        logo: 'html.png',
+        name: 'HTML'
+      },
+      {
+        logo: 'css.png',
+        name: 'CSS'
+      },
+      {
+        logo: 'figma.svg',
+        name: 'Figma'
+      },
+      {
+        logo: 'photoshop.png',
+        name: 'Photoshop'
+      }
+    ],
+    uses: [
+      'Photoshop layout design',
+      'responsive, mobile-friendly CSS',
+      'advanced CSS techniques',
+      'search engine optimization (SEO)',
+      'resource/request optimization',
+      'image manipulation',
+      'accessibility'
+    ]
+  },
+  {
     name: 'Code Crafting',
-    logo: 'cursor.png',
+    logo: 'command-line.svg',
     years: '',
     themeClass: 'gradient3',
     skillItems: [
       {
-        logo: 'cursor.png',
+        logo: 'cursor.svg',
         name: 'Cursor'
       },
       {
-        logo: 'visual-code.png',
-        name: 'Visual Code'
+        logo: 'command-line.svg',
+        name: 'Command Line'
       },
       {
-        logo: 'command-line.png',
-        name: 'Command Line'
+        logo: 'visual-code.png',
+        name: 'VS Code'
+      },
+      {
+        logo: 'jetbrains.svg',
+        name: 'JetBrains'
       }
     ],
     uses: [
@@ -237,12 +246,12 @@ export const skills = [
         name: 'Linux'
       },
       {
-        logo: 'ibm-i.png',
-        name: 'IBM i'
-      },
-      {
         logo: 'windows.png',
         name: 'Windows'
+      },
+      {
+        logo: 'ibm-i.png',
+        name: 'IBM i'
       },
       {
         logo: 'android.png',

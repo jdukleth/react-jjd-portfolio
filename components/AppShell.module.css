@@ -16,6 +16,10 @@
   padding-bottom: calc(2rem + 100px);
 }
 
+.page:focus {
+  outline: none;
+}
+
 @media (max-width: 599px) {
   .page {
     padding: 1rem;

@@ -1,5 +1,29 @@
 export const projects = [
   {
+    name: 'Aviation Ops Platform',
+    developedFor: 'Vellox Group',
+    cover: {
+      pic: 'placeholder-aviation-ops.jpg',
+      position: 'center'
+    },
+    gallery: [],
+    description:
+      'Placeholder copy for an aviation operations platform. Details, scope, and screenshots will be added when this project is ready to showcase publicly.',
+    skills: []
+  },
+  {
+    name: 'Wholesale Ecommerce Website',
+    developedFor: 'JDS Industries',
+    cover: {
+      pic: 'placeholder-ecommerce-jds.jpg',
+      position: 'center'
+    },
+    gallery: [],
+    description:
+      'Placeholder copy for a wholesale ecommerce website. Summary, stack, and gallery images will be updated here in a future revision.',
+    skills: []
+  },
+  {
     name: 'E-commerce Tooling',
     developedFor: 'JDS Industries',
     cover: {

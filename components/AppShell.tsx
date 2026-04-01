@@ -1,5 +1,7 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
+import { useCallback, useEffect, useRef } from 'react'
 import styles from './AppShell.module.css'
 import { Fullscreen } from '@/components/Fullscreen'
 import { Navbar } from '@/components/Navbar'
@@ -7,13 +9,38 @@ import { NavigationProgressProvider } from '@/components/NavigationProgress'
 import { PortfolioProvider } from '@/components/PortfolioProvider'
 import { Stars } from '@/components/Stars'
 
+const MainScrollPane = ({ children }: { children: React.ReactNode }) => {
+  const mainRef = useRef<HTMLElement>(null)
+  const pathname = usePathname()
+
+  const focusMain = useCallback(() => {
+    const el = mainRef.current
+    if (el) el.focus({ preventScroll: true })
+  }, [])
+
+  useEffect(() => {
+    focusMain()
+  }, [pathname, focusMain])
+
+  return (
+    <main
+      ref={mainRef}
+      id="main-scroll"
+      tabIndex={-1}
+      className={styles.page}
+    >
+      {children}
+    </main>
+  )
+}
+
 export const AppShell = ({ children }: { children: React.ReactNode }) => (
   <PortfolioProvider>
     <NavigationProgressProvider>
       <Stars />
       <div className={styles.shell}>
         <Fullscreen />
-        <main className={styles.page}>{children}</main>
+        <MainScrollPane>{children}</MainScrollPane>
         <Navbar />
       </div>
     </NavigationProgressProvider>
