@@ -1,0 +1,32 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+}
+
+.btnRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 2px solid var(--accent-1);
+  color: var(--accent-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  text-decoration: none;
+}

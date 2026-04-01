@@ -1,0 +1,47 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* One rhythm for name → title → rule → taglines → buttons (scales on narrow viewports) */
+  gap: clamp(0.75rem, 2.5vw, 1.125rem);
+}
+
+.name {
+  margin: 0;
+  line-height: 1.12;
+  font-size: 3em;
+  letter-spacing: 0.15em;
+}
+
+.jobTitle {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 1.5em;
+  color: slategray;
+  letter-spacing: 0.1em;
+}
+
+.divider {
+  margin: 0;
+  align-self: stretch;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  flex-shrink: 0;
+}
+
+.taglines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.supplemental {
+  margin: 0;
+  line-height: 1.45;
+  font-size: 1em;
+  color: slategray;
+  letter-spacing: 0.1em;
+}

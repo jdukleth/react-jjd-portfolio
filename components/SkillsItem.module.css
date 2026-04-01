@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 0.5rem 1rem;
+}
+
+.icon {
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+}
+
+.label {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+}

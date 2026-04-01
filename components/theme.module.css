@@ -1,0 +1,51 @@
+.gradient1 {
+  color: var(--accent-1);
+}
+
+.gradient2 {
+  color: var(--accent-2);
+}
+
+.gradient3 {
+  color: var(--accent-3);
+}
+
+.gradient4 {
+  color: var(--accent-4);
+}
+
+.bg1 {
+  background-color: var(--accent-1);
+}
+
+.bg2 {
+  background-color: var(--accent-2);
+}
+
+.bg3 {
+  background-color: var(--accent-3);
+}
+
+.bg4 {
+  background-color: var(--accent-4);
+}
+
+.reveal1 {
+  background: color-mix(in srgb, var(--accent-1) 92%, transparent);
+}
+
+.reveal2 {
+  background: color-mix(in srgb, var(--accent-2) 92%, transparent);
+}
+
+.reveal3 {
+  background: color-mix(in srgb, var(--accent-3) 92%, transparent);
+}
+
+.reveal4 {
+  background: color-mix(in srgb, var(--accent-4) 92%, transparent);
+}
+
+.primaryMuted {
+  color: #708090;
+}

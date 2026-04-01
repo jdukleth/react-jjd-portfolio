@@ -1,0 +1,20 @@
+.block:nth-child(odd) {
+  background: rgba(112, 128, 144, 0.2);
+}
+
+.block:nth-child(even) {
+  background: rgba(112, 128, 144, 0.3);
+}
+
+.wrap {
+  margin-top: 1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+@media (max-width: 599px) {
+  .wrap {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}

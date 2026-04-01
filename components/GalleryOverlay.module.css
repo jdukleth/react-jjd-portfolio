@@ -1,0 +1,72 @@
+.openButton {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0;
+  padding: 1rem 3rem;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: transparent;
+  font: inherit;
+  border: 2px solid;
+}
+
+.t1 {
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
+.t2 {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.t3 {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
+}
+
+.t4 {
+  border-color: var(--accent-4);
+  color: var(--accent-4);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #000;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.toolbarTitle {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}

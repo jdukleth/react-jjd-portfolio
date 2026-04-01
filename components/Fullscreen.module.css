@@ -1,0 +1,24 @@
+.wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  padding: 28px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+}
+
+@media (max-width: 959px) {
+  .wrap {
+    display: none;
+  }
+}

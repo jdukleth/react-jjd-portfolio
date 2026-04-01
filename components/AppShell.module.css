@@ -1,0 +1,22 @@
+.shell {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100vh - 72px);
+  padding: 2rem;
+}
+
+@media (max-width: 599px) {
+  .page {
+    padding: 1rem;
+  }
+}

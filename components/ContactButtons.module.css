@@ -1,0 +1,51 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  /* Vertical spacing from nameplate .root gap only */
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.25rem;
+  /* Was 28px padding → 88px circle with 32px icons; −5px diameter → 25.5px padding */
+  padding: 25.5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.04);
+  color: slategray;
+  cursor: pointer;
+}
+
+.btn:global(.glassInteractive):hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 22px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px) saturate(135%);
+  -webkit-backdrop-filter: blur(10px) saturate(135%);
+  filter: brightness(1.035);
+}
+
+.btn:global(.glassInteractive):hover::before {
+  opacity: 0.52;
+}
+
+.btn:global(.glassInteractive):hover::after {
+  opacity: 0.78;
+}
+
+.btn:global(.glassInteractive):active {
+  transform: translateY(0) scale(0.985);
+  filter: brightness(0.96);
+}
+
+.btn:global(.glassInteractive):active::before {
+  opacity: 0.28;
+}
