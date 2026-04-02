@@ -22,9 +22,9 @@ export const SkillsMasonry = ({ skills }: { skills: Skill[] }) => {
       className={styles.masonryGrid}
       columnClassName={styles.masonryColumn}
     >
-      {skills.map((skill) => (
+      {skills.map((skill, index) => (
         <div key={skill.name} className={styles.item}>
-          <SkillsCard data={skill} />
+          <SkillsCard data={skill} priority={index === 0} />
         </div>
       ))}
     </Masonry>

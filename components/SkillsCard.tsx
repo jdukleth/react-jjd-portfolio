@@ -6,7 +6,13 @@ import { SkillsItem } from './SkillsItem'
 import type { Skill } from '@/stores/usePortfolioStore'
 import { gradientTextClass, skillRevealClass } from '@/lib/themeGradientClasses'
 
-export const SkillsCard = ({ data }: { data: Skill }) => {
+export const SkillsCard = ({
+  data,
+  priority = false,
+}: {
+  data: Skill;
+  priority?: boolean;
+}) => {
   const revealCls = skillRevealClass(data.themeClass)
   const textClass = gradientTextClass(data.themeClass)
   const logoPath = `/images/skills-logos/${data.logo}`
@@ -22,6 +28,8 @@ export const SkillsCard = ({ data }: { data: Skill }) => {
           width={200}
           height={135}
           unoptimized={logoSvg}
+          priority={priority}
+          style={{ width: 'auto', height: 'auto' }}
         />
         <div className={`${styles.reveal} ${revealCls}`}>
           <ul>

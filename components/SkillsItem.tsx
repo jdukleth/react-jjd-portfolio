@@ -17,6 +17,7 @@ export const SkillsItem = ({ item }: { item: Skill['skillItems'][number] }) => {
           width={40}
           height={40}
           unoptimized={svg}
+          style={{ width: 'auto', height: 'auto' }}
         />
       </div>
       <div className={styles.label}>{item.name}</div>

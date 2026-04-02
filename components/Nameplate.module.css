@@ -18,7 +18,7 @@
   margin: 0;
   line-height: 1.3;
   font-size: 1.5em;
-  color: slategray;
+  color: #9ca8b8;
   letter-spacing: 0.1em;
 }
 
@@ -42,6 +42,6 @@
   margin: 0;
   line-height: 1.45;
   font-size: calc(1em + 2px);
-  color: slategray;
+  color: #9ca8b8;
   letter-spacing: 0.1em;
 }

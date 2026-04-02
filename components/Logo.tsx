@@ -10,6 +10,7 @@ export const Logo = () => {
       width={300}
       height={300}
       priority
+      style={{ width: 'auto', height: 'auto' }}
     />
   )
 }

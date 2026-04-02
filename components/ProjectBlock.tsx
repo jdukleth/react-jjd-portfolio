@@ -8,6 +8,7 @@ import type { Project } from '@/stores/usePortfolioStore'
 import {
   isProjectCoverGif,
   isProjectCoverJpg,
+  isProjectCoverSvg,
   resolveGalleryImages,
 } from '@/lib/projectGallery'
 import { gradientTextClass } from '@/lib/themeGradientClasses'
@@ -35,7 +36,11 @@ export const ProjectBlock = ({
   const gifUncropped = isFirstBlock && isProjectCoverGif(pic)
 
   const media = (() => {
-    if (!isProjectCoverJpg(pic) && !isProjectCoverGif(pic)) {
+    if (
+      !isProjectCoverJpg(pic) &&
+      !isProjectCoverGif(pic) &&
+      !isProjectCoverSvg(pic)
+    ) {
       return (
         <iframe
           className={styles.iframe}
@@ -55,6 +60,16 @@ export const ProjectBlock = ({
           style={
             gifUncropped ? undefined : { objectPosition: data.cover.position }
           }
+        />
+      )
+    }
+    if (isProjectCoverSvg(pic)) {
+      return (
+        <img
+          className={styles.gifCover}
+          src={`/images/projects/${pic}`}
+          alt=""
+          style={{ objectPosition: data.cover.position }}
         />
       )
     }
@@ -103,19 +118,31 @@ export const ProjectBlock = ({
         <div className={styles.inner}>
           <h3 className={`${styles.title} ${textClass}`}>{data.name}</h3>
           <h4 className={styles.sub}>{data.developedFor}</h4>
-          <p className={styles.description}>{data.description}</p>
+          {Array.isArray(data.description) ? (
+            <ul className={styles.descriptionList}>
+              {data.description.map((line, i) => (
+                <li key={i} className={styles.descriptionListItem}>
+                  {line}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className={styles.description}>{data.description}</p>
+          )}
           <div className={styles.chips}>
             {data.skills.map((skill) => (
               <div key={`${skill.name}-${skill.logo}`} className={styles.chip}>
-                <Image
-                  src={`/images/skills-logos/${skill.logo}`}
-                  alt=""
-                  width={18}
-                  height={18}
-                  unoptimized={skill.logo.endsWith('.svg')}
-                  aria-hidden
-                />
-                <span>{skill.name}</span>
+                <span className={styles.chipIcon}>
+                  <Image
+                    src={`/images/skills-logos/${skill.logo}`}
+                    alt=""
+                    fill
+                    sizes="32px"
+                    className={styles.chipIconImg}
+                    unoptimized={skill.logo.endsWith('.svg')}
+                  />
+                </span>
+                <span className={styles.chipLabel}>{skill.name}</span>
               </div>
             ))}
           </div>

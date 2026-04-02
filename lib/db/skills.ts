@@ -19,7 +19,9 @@ export const skills = [
       }
     ],
     uses: [
-      '4x e-commerce platform',
+      'aviation ops maps and rules',
+      'wholesale ecomm admin interfaces',
+      '5x e-commerce platform',
       '2x rentals & exchange program',
       '4x advanced configurators',
       '6x document management',
@@ -48,9 +50,11 @@ export const skills = [
       }
     ],
     uses: [
+      'wholesale admin dashboard',
+      'aviation ops work',
       '5x ERP integration',
       '2x full warehouse integration',
-      '1x e-commerce REST API',
+      '2x e-commerce REST API',
       '3+ other REST/GraphQL APIs',
       'ECS/GraphQL TCG engine',
       '... using it daily'
@@ -76,6 +80,8 @@ export const skills = [
       }
     ],
     uses: [
+      'aviation ETL client migrations',
+      'ecomm admin data layer',
       'enterprise integration',
       'relational schema design',
       'normalization',
@@ -105,7 +111,8 @@ export const skills = [
       }
     ],
     uses: [
-      '4x enterprise e-commerce sites',
+      'aviation ops work',
+      '5x enterprise e-commerce sites',
       '5x administration dashboards',
       '12+ REST APIs',
       '2x rentals & exchange program',
@@ -164,6 +171,8 @@ export const skills = [
       }
     ],
     uses: [
+      'aviation DevOps',
+      'ecommerce production servers',
       'AWS / EC2 deployment',
       'enterprise experience',
       'Nginx/Apache configs',
@@ -195,6 +204,7 @@ export const skills = [
       }
     ],
     uses: [
+      'dark mode and themes creation',
       'Photoshop layout design',
       'responsive, mobile-friendly CSS',
       'advanced CSS techniques',

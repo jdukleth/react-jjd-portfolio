@@ -11,6 +11,27 @@ import {
   IconPhone,
 } from '@/components/icons'
 
+const linkAriaLabel = (url: string) => {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '')
+    if (host.includes('github')) return 'GitHub profile (opens in a new tab)'
+    if (host.includes('linkedin')) return 'LinkedIn profile (opens in a new tab)'
+  } catch {
+    /* ignore invalid URL */
+  }
+  return 'External link (opens in a new tab)'
+}
+
+const contactButtonKey = (
+  button: Nameplate['contactButtons'][number],
+  index: number,
+) => {
+  if (button.type === 'link') return button.url
+  if (button.type === 'phone') return `phone:${button.phoneNumber}`
+  if (button.type === 'email') return `email:${button.email}`
+  return `contact-${index}`
+}
+
 const iconFor = (mdi: string) => {
   switch (mdi) {
     case 'mdi-github':
@@ -39,13 +60,13 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
         const Icon = iconFor(button.icon)
         if (button.type === 'link') {
           return (
-            <span key={index} className={styles.cell}>
+            <span key={contactButtonKey(button, index)} className={styles.cell}>
               <a
                 href={button.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.btn} glassInteractive glassInteractiveRound`}
-                aria-label={button.url}
+                aria-label={linkAriaLabel(button.url)}
               >
                 <Icon size={32} />
               </a>
@@ -60,7 +81,7 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
             body: tagline,
           }
           return (
-            <span key={index} className={styles.cell}>
+            <span key={contactButtonKey(button, index)} className={styles.cell}>
               <button
                 type="button"
                 className={`${styles.btn} glassInteractive glassInteractiveRound`}
@@ -80,7 +101,7 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
             body: tagline,
           }
           return (
-            <span key={index} className={styles.cell}>
+            <span key={contactButtonKey(button, index)} className={styles.cell}>
               <button
                 type="button"
                 className={`${styles.btn} glassInteractive glassInteractiveRound`}

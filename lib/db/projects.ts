@@ -1,59 +1,178 @@
+/** "E-commerce Admin Dashboard" stack only — placeholders use variants below. */
+const eCommerceToolingSkills = [
+  {
+    name: 'Node.js',
+    logo: 'node.png'
+  },
+  {
+    name: 'React / Next.js',
+    logo: 'react.png'
+  },
+  {
+    name: 'Prisma',
+    logo: 'prisma.png'
+  },
+  {
+    name: 'SQL',
+    logo: 'sql.png'
+  },
+  {
+    name: 'REST API',
+    logo: 'rest-api.svg'
+  },
+  {
+    name: 'AJAX',
+    logo: 'ajax.png'
+  },
+  {
+    name: 'GitHub Actions',
+    logo: 'git.png'
+  }
+]
+
+const aviationOpsPlaceholderSkills = [
+  {
+    name: 'Node.js',
+    logo: 'node.png'
+  },
+  {
+    name: 'PHP',
+    logo: 'php.png'
+  },
+  {
+    name: 'Vue.js',
+    logo: 'vue.png'
+  },
+  {
+    name: 'MySQL',
+    logo: 'mysql.png'
+  },
+  {
+    name: 'AWS',
+    logo: 'aws.png'
+  },
+  {
+    name: 'REST API',
+    logo: 'rest-api.svg'
+  },
+  {
+    name: 'AJAX',
+    logo: 'ajax.png'
+  },
+  {
+    name: 'GitHub Actions',
+    logo: 'git.png'
+  }
+]
+
+const wholesaleEcommercePlaceholderSkills = [
+  {
+    name: 'Node.js',
+    logo: 'node.png'
+  },
+  {
+    name: 'PHP',
+    logo: 'php.png'
+  },
+  {
+    name: 'React / Next.js',
+    logo: 'react.png'
+  },
+  {
+    name: 'SQL',
+    logo: 'sql.png'
+  },
+  {
+    name: 'REST API',
+    logo: 'rest-api.svg'
+  },
+  {
+    name: 'AJAX',
+    logo: 'ajax.png'
+  },
+  {
+    name: 'GitHub Actions',
+    logo: 'git.png'
+  }
+]
+
 export const projects = [
   {
     name: 'Aviation Ops Platform',
     developedFor: 'Vellox Group',
     cover: {
-      pic: 'placeholder-aviation-ops.jpg',
+      pic: 'vellox-01.svg',
       position: 'center'
     },
-    gallery: [],
-    description:
-      'Placeholder copy for an aviation operations platform. Details, scope, and screenshots will be added when this project is ready to showcase publicly.',
-    skills: []
+    gallery: ['vellox-01.svg', 'vellox-03.png'],
+    description: [
+      'Worked as a team in a highly collaborative, Agile environment with Jira at its core.',
+      'Worked on flight tracking, operational control center, dispatch, aircraft stats, weather systems, pilot trackables, aviation map, duty times, maintenance, report generation, and more.',
+      'Improved speed and stability of entire platform by identifying and solving session locking.',
+      'Built ETL database migration system to bring in new clients.',
+      'Built UI-based FAA rules system to help company expand.',
+      'Created aircraft cone system on map to show weather METARs and TAFs in flight path.',
+      'Created pilot and supervisor system for FAA rules violations.',
+      'Completed 133 Jira tickets in under a year being new to aviation.',
+      'Solved complex aircraft maintenance bugs.',
+      'Centralized AJAX calls and implemented mechanism to prevent race conditions.',
+      'Built a beloved dark mode system for the platform.',
+      'Worked with team on DevOps; including AWS and implemented GitHub Actions'
+    ],
+    skills: [...aviationOpsPlaceholderSkills]
   },
   {
-    name: 'Wholesale Ecommerce Website',
+    name: 'Wholesale E-commerce Website',
     developedFor: 'JDS Industries',
     cover: {
-      pic: 'placeholder-ecommerce-jds.jpg',
+      pic: 'jds-01.png',
       position: 'center'
     },
-    gallery: [],
-    description:
-      'Placeholder copy for a wholesale ecommerce website. Summary, stack, and gallery images will be updated here in a future revision.',
-    skills: []
+    gallery: [
+      'jds-01.png',
+      'jds-02.png',
+      'jds-03.png',
+      'jds-04.png',
+      'jds-05.png',
+      'jds-06.png'
+    ],
+    description: [
+      'Led and trained the web team to transform, modernize and streamline their website.',
+      'Managed servers and DevOps for a high-volume, complex e-commerce system.',
+      'Successfully combined 3 separate e-commerce sites into one unified domain / system.',
+      'Went through the entire website to make everything mobile friendly.',
+      'Implemented new credit card system',
+      'Implemented new taxes system',
+      'Implemented new tooling for marketing, accounting and customer service teams.',
+      'Built a new React admin dashboard for managing the e-commerce site.',
+      'Built a flexible, reusable site generation tool for creating 9 product line websites.',
+      'Worked on wholesale systems to complement the website.',
+      'Worked on tooling systems for wholesale businesses using our products.'
+    ],
+    skills: [...wholesaleEcommercePlaceholderSkills]
   },
   {
-    name: 'E-commerce Tooling',
+    name: 'E-commerce Admin Dashboard',
     developedFor: 'JDS Industries',
     cover: {
       pic: 'jds-tools.gif',
       position: 'left top'
     },
     gallery: [],
-    description:
-      'Created a suite of tools to support the e-commerce team. Developed an all-in-one tool to manage products, content resources and more. Built a new credit card systems UI and migrated to a better vendor. These tools were built with Node/Express, React/Next.js and Prisma. They were integrated into the existing e-commerce platform. The tools were designed to be intuitive and easy to use. They were also designed to be flexible and extensible. The tools were built with a strong emphasis on performance.',
-    skills: [
-      {
-        name: 'Node.js',
-        logo: 'node.png'
-      },
-      {
-        name: 'React / Next.js',
-        logo: 'react.png'
-      },
-      {
-        name: 'Prisma',
-        logo: 'prisma.png'
-      },
-      {
-        name: 'GitHub Actions',
-        logo: 'git.png'
-      }
-    ]
+    description: [
+      'Created a suite of tools to support the e-commerce team.',
+      'Developed an all-in-one tool to manage products, content resources and more.',
+      'Built a new credit card systems UI and migrated to a better vendor.',
+      'These tools were built with Node/Express, React/Next.js and Prisma.',
+      'They were integrated into the existing e-commerce platform.',
+      'The tools were designed to be intuitive and easy to use.',
+      'They were also designed to be flexible and extensible.',
+      'The tools were built with a strong emphasis on performance.'
+    ],
+    skills: [...eCommerceToolingSkills]
   },
   {
-    name: 'eComEdge v2 Design & Prototype',
+    name: 'eComEdge v2 E-commerce Platform',
     developedFor: 'Software Alternatives',
     cover: {
       pic: 'ecommerce-v2-09.jpg',
@@ -69,24 +188,30 @@ export const projects = [
       'ecommerce-v2-05.jpg',
       'ecommerce-v2-06.jpg'
     ],
-    description:
-      'Researched optimal UX design for e-commerce. Carefully planned & Photoshopped original designs for the major pages. Was asked to code a proof-of-concept within a week & rose to the challenge. Developed a feature-rich page, header, footer, routing, exstensible structure and tech stack in that time. Utilized server-side rendering for search engine optimization on a single page app. Co-developed the e-commerce GraphQL API on top of Node & Express.',
+    description: [
+      'Researched optimal UX design for e-commerce.',
+      'Carefully planned & Photoshopped original designs for the major pages.',
+      'Was asked to code a proof-of-concept within a week & rose to the challenge.',
+      'Developed a feature-rich page, header, footer, routing, exstensible structure and tech stack in that time.',
+      'Utilized server-side rendering for search engine optimization on a single page app.',
+      'Co-developed the e-commerce GraphQL API on top of Node & Express.'
+    ],
     skills: [
       {
         name: 'Photoshop',
         logo: 'photoshop.png'
       },
       {
-        name: 'Vue.js',
-        logo: 'vue.png'
+        name: 'React',
+        logo: 'react.png'
       },
       {
-        name: 'Nuxt.js',
-        logo: 'nuxt.png'
+        name: 'Next.js',
+        logo: 'nextjs.svg'
       },
       {
-        name: 'Vuetify',
-        logo: 'vuetify.png'
+        name: 'MUI',
+        logo: 'mui.svg'
       },
       {
         name: 'Node.js',
@@ -97,8 +222,16 @@ export const projects = [
         logo: 'express.png'
       },
       {
-        name: 'GraphQL',
-        logo: 'graphql.png'
+        name: 'REST API',
+        logo: 'rest-api.svg'
+      },
+      {
+        name: 'AJAX',
+        logo: 'ajax.png'
+      },
+      {
+        name: 'SQL',
+        logo: 'sql.png'
       },
       {
         name: 'git',
@@ -128,8 +261,14 @@ export const projects = [
       'ecommerce-v1-13.jpg',
       'ecommerce-v1-02.jpg'
     ],
-    description:
-      'Tasked to create an in-house e-commerce platform to satisfy the unique requirements of an integrated enterprise software suite. Co-developed core systems; including taxonomy, filtering, product tiles, checkout steps, shipping, submit order, quote requests, and more. Put a strong emphasis on performance. Worked hand-in-hand with specialists, including SEO, to grow business. Built many REST API routes to migrate off standalone scripts. Heavily involved with business logic & client relations.',
+    description: [
+      'Tasked to create an in-house e-commerce platform to satisfy the unique requirements of an integrated enterprise software suite.',
+      'Co-developed core systems; including taxonomy, filtering, product tiles, checkout steps, shipping, submit order, quote requests, and more.',
+      'Put a strong emphasis on performance.',
+      'Worked hand-in-hand with specialists, including SEO, to grow business.',
+      'Built many REST API routes to migrate off standalone scripts.',
+      'Heavily involved with business logic & client relations.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -180,8 +319,12 @@ export const projects = [
       'job-app-03.jpg',
       'job-app-04.jpg'
     ],
-    description:
-      'Asked to improve the hiring process for the largest supplier of remanufactured transformers in the US. Developed a single page app with six sections and an admin page to manage submissions. Utilized Vue.js & Vuetify to create an elegant, intuitive interace. Integrated the submissions management into the companies existing dashboard.',
+    description: [
+      'Asked to improve the hiring process for the largest supplier of remanufactured transformers in the US.',
+      'Developed a single page app with six sections and an admin page to manage submissions.',
+      'Utilized Vue.js & Vuetify to create an elegant, intuitive interace.',
+      'Integrated the submissions management into the companies existing dashboard.'
+    ],
     skills: [
       {
         name: 'Vue.js',
@@ -192,8 +335,16 @@ export const projects = [
         logo: 'vuetify.png'
       },
       {
+        name: 'REST API',
+        logo: 'rest-api.svg'
+      },
+      {
         name: 'AJAX',
         logo: 'ajax.png'
+      },
+      {
+        name: 'SQL',
+        logo: 'sql.png'
       },
       {
         name: 'git',
@@ -205,24 +356,23 @@ export const projects = [
     name: 'This Portfolio',
     developedFor: '',
     cover: {
-      pic: 'portfolio-01.jpg',
+      pic: 'portfolio-01.png',
       position: '-200px top'
     },
-    gallery: ['portfolio-01.jpg', 'portfolio-02.jpg', 'portfolio-03.jpg'],
-    description:
-      'Utilized my ideal tech stack to create a crisp portfolio of work I am proud of. I was excited to include my fondness for astronomy and vivid colors. Credit to Goose for only barking in my face when necessary.',
+    gallery: ['portfolio-01.png', 'portfolio-02.png', 'portfolio-03.png'],
+    description: [
+      'Utilized my ideal tech stack to create a crisp portfolio of work I am proud of.',
+      'I was excited to include my fondness for astronomy and vivid colors.',
+      'Credit to Goose for only barking in my face when necessary.'
+    ],
     skills: [
       {
-        name: 'Vue.js',
-        logo: 'vue.png'
+        name: 'React',
+        logo: 'react.png'
       },
       {
-        name: 'Nuxt.js',
-        logo: 'nuxt.png'
-      },
-      {
-        name: 'Vuetify',
-        logo: 'vuetify.png'
+        name: 'Next.js',
+        logo: 'nextjs.svg'
       },
       {
         name: 'Photoshop',
@@ -235,6 +385,14 @@ export const projects = [
       {
         name: 'Node.js',
         logo: 'node.png'
+      },
+      {
+        name: 'REST API',
+        logo: 'rest-api.svg'
+      },
+      {
+        name: 'AJAX',
+        logo: 'ajax.png'
       },
       {
         name: 'Git',
@@ -250,8 +408,15 @@ export const projects = [
       position: 'left top'
     },
     gallery: ['rentals-01.jpg', 'rentals-02.jpg', 'rentals-03.jpg'],
-    description:
-      'Challenged to create an online rentals process for a business which delivers instruments & supplies to hundreds of schools each week. Co-developed and integrated this website into our enterprise software suite. Solved complex technical issues with the platforms involved. Navigated massive SQL statements and simplified where possible. Built as a single page app. Was asked to develop a follow up site for their instrument exchange process. Heavy REST API and JavaScript development ensued.',
+    description: [
+      'Challenged to create an online rentals process for a business which delivers instruments & supplies to hundreds of schools each week.',
+      'Co-developed and integrated this website into our enterprise software suite.',
+      'Solved complex technical issues with the platforms involved.',
+      'Navigated massive SQL statements and simplified where possible.',
+      'Built as a single page app.',
+      'Was asked to develop a follow up site for their instrument exchange process.',
+      'Heavy REST API and JavaScript development ensued.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -287,8 +452,12 @@ export const projects = [
       position: 'left top'
     },
     gallery: ['quotes-01.jpg'],
-    description:
-      'Inherited a quote management project & was asked to improve it with an advanced configurator. Developed in a timely manner inside Angular; which I had little experience with. This project required mindful creation of REST API routes and performant interface code. Went on to create other features & bug fixes for this project.',
+    description: [
+      'Inherited a quote management project & was asked to improve it with an advanced configurator.',
+      'Developed in a timely manner inside Angular; which I had little experience with.',
+      'This project required mindful creation of REST API routes and performant interface code.',
+      'Went on to create other features & bug fixes for this project.'
+    ],
     skills: [
       {
         name: 'Angular',
@@ -329,8 +498,10 @@ export const projects = [
       'ecommerce-admin-03.jpg',
       'ecommerce-admin-04.jpg'
     ],
-    description:
-      'Worked closely with clients to create tools to administrate their e-commerce site. Added onto my co-workers foundation with new sections & features.',
+    description: [
+      'Worked closely with clients to create tools to administrate their e-commerce site.',
+      'Added onto my co-workers foundation with new sections & features.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -366,8 +537,11 @@ export const projects = [
       position: 'left top'
     },
     gallery: ['ap-01.jpg', 'ap-02.jpg'],
-    description:
-      'Tasked to create a web interface and API for a large accounts payable team. Integrated it with our existing enterprise software suite. Safely scripted image manipulation on 400 gigabytes worth of invoice documents.',
+    description: [
+      'Tasked to create a web interface and API for a large accounts payable team.',
+      'Integrated it with our existing enterprise software suite.',
+      'Safely scripted image manipulation on 400 gigabytes worth of invoice documents.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -380,6 +554,10 @@ export const projects = [
       {
         name: 'PHP',
         logo: 'php.png'
+      },
+      {
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
@@ -401,8 +579,12 @@ export const projects = [
       'charts-04.jpg',
       'charts-05.jpg'
     ],
-    description:
-      'Was challenged to create financial tools for the CEO of a medical company. Studied data & turned it into the requested charts & tables. This project was heavy on JavaScript and SQL statements. This was my first project at Software Alternatives.',
+    description: [
+      'Was challenged to create financial tools for the CEO of a medical company.',
+      'Studied data & turned it into the requested charts & tables.',
+      'This project was heavy on JavaScript and SQL statements.',
+      'This was my first project at Software Alternatives.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -415,6 +597,10 @@ export const projects = [
       {
         name: 'PHP',
         logo: 'php.png'
+      },
+      {
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
@@ -430,8 +616,11 @@ export const projects = [
       position: 'left top'
     },
     gallery: ['timeclock-02.jpg', 'timeclock-01.jpg'],
-    description:
-      'Redeveloped our timeclock interface to finish moving the company away from Java programs. Solved technical challenges for deploying the website to a warehouse tablet. Developed interface and hooked up to existing PHP scripts.',
+    description: [
+      'Redeveloped our timeclock interface to finish moving the company away from Java programs.',
+      'Solved technical challenges for deploying the website to a warehouse tablet.',
+      'Developed interface and hooked up to existing PHP scripts.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -440,6 +629,14 @@ export const projects = [
       {
         name: 'PHP',
         logo: 'php.png'
+      },
+      {
+        name: 'REST API',
+        logo: 'rest-api.svg'
+      },
+      {
+        name: 'SQL',
+        logo: 'sql.png'
       },
       {
         name: 'AJAX',
@@ -455,8 +652,11 @@ export const projects = [
       position: 'left top'
     },
     gallery: ['docman-01.jpg'],
-    description:
-      'Inherited this project and refactored the document scanning, interface theme, and image manipulation functions. This was done to move away from instability and security concerns with Java. Utilized the Dynamsoft Web Scanning API to vastly improve the stability and speed of this website.',
+    description: [
+      'Inherited this project and refactored the document scanning, interface theme, and image manipulation functions.',
+      'This was done to move away from instability and security concerns with Java.',
+      'Utilized the Dynamsoft Web Scanning API to vastly improve the stability and speed of this website.'
+    ],
     skills: [
       {
         name: 'JavaScript',
@@ -469,6 +669,10 @@ export const projects = [
       {
         name: 'PHP',
         logo: 'php.png'
+      },
+      {
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
@@ -494,8 +698,10 @@ export const projects = [
       'old-04.jpg',
       'old-05.jpg'
     ],
-    description:
-      "Other websites I've completed: Luverne Public Schools / LPS District Policies / LPS IT Ticket System / LPS BPA Local Chapter / O'Connor Heating & Cooling / 4 gaming guild sites / 2 fan sites / card game deck builder / turned concept into code on David's Bridal & Rexcraft e-commerce / James Tower Timetracking / Flash widgets sold on Envato. More screenshots to come, some sites & databases need to be rehosted.",
+    description: [
+      "Other websites I've completed: Luverne Public Schools / LPS District Policies / LPS IT Ticket System / LPS BPA Local Chapter / O'Connor Heating & Cooling / 4 gaming guild sites / 2 fan sites / card game deck builder / turned concept into code on David's Bridal & Rexcraft e-commerce / James Tower Timetracking / Flash widgets sold on Envato.",
+      'More screenshots to come, some sites & databases need to be rehosted.'
+    ],
     skills: [
       {
         name: 'Photoshop',
@@ -512,6 +718,14 @@ export const projects = [
       {
         name: 'PHP',
         logo: 'php.png'
+      },
+      {
+        name: 'REST API',
+        logo: 'rest-api.svg'
+      },
+      {
+        name: 'AJAX',
+        logo: 'ajax.png'
       },
       {
         name: 'Flash',

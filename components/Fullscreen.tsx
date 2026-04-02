@@ -1,11 +1,19 @@
 'use client'
 
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import styles from './Fullscreen.module.css'
 import { IconFullscreen, IconFullscreenExit } from '@/components/icons'
 
+const fullscreenActive = () => Boolean(document.fullscreenElement)
+
 export const Fullscreen = () => {
   const [isFullscreen, setIsFullscreen] = useState(false)
+
+  useEffect(() => {
+    const sync = () => setIsFullscreen(fullscreenActive())
+    document.addEventListener('fullscreenchange', sync)
+    return () => document.removeEventListener('fullscreenchange', sync)
+  }, [])
 
   const toggle = useCallback(() => {
     const el = document.documentElement
