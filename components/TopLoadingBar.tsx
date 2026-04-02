@@ -1,6 +1,5 @@
 import loadingStyles from '@/app/loading.module.css'
 
-/** Gradient bar across the top of the viewport (shared with route `loading.tsx` and nav progress). */
 export const TopLoadingBar = () => (
   <>
     <div

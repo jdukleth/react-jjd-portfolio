@@ -1,4 +1,3 @@
-/** "E-commerce Admin Dashboard" stack only — placeholders use variants below. */
 const eCommerceToolingSkills = [
   {
     name: 'Node.js',

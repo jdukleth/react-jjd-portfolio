@@ -36,6 +36,13 @@ export const GalleryOverlay = ({
   const [activeSlide, setActiveSlide] = useState(0)
   const controlled = onOpenChange !== undefined
   const open = controlled ? Boolean(openProp) : internalOpen
+  const [prevOpen, setPrevOpen] = useState(open)
+  if (open !== prevOpen) {
+    setPrevOpen(open)
+    if (open) {
+      setActiveSlide(0)
+    }
+  }
 
   const setOpen = useCallback(
     (next: boolean) => {
@@ -53,13 +60,6 @@ export const GalleryOverlay = ({
   const canNext = galleryLength > 0 && activeSlide < galleryLength - 1
   const slideLabel =
     galleryLength < 1 ? 0 : Math.min(activeSlide + 1, galleryLength)
-
-  useEffect(() => {
-    if (!open) return
-    // Reset slide when the modal opens (sync with `open` prop).
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- dialog must start at slide 0 without flash
-    setActiveSlide(0)
-  }, [open])
 
   useEffect(() => {
     if (!open) return

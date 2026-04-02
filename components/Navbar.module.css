@@ -28,11 +28,10 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 8px;
   transition: filter 0.22s ease;
 }
 
-/* Icon + label; frosted glass is this cluster’s own surface when emphasized */
 .tabCluster {
   position: relative;
   display: inline-flex;
@@ -43,7 +42,7 @@
   z-index: 1;
   max-width: 100%;
   padding: 6px 18px;
-  border-radius: 13px;
+  border-radius: 8px;
   overflow: hidden;
   color: #000;
   background: transparent;
@@ -69,7 +68,6 @@
   background: transparent !important;
 }
 
-/* Glass sits on ::before; icon + label use translucent ink so blur/shine read through */
 .tabEmphasized .tabCluster {
   isolation: isolate;
   color: rgba(0, 0, 0, 0.78);

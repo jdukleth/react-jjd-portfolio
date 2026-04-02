@@ -15,25 +15,19 @@
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06" />
     </linearGradient>
   </defs>
-  <!-- Outer chrome -->
   <rect x="6" y="6" width="228" height="148" rx="14" fill="#1a1d24" />
   <rect x="8" y="8" width="224" height="144" rx="12" fill="url(#cli-frame)" />
   <rect x="8" y="8" width="224" height="144" rx="12" fill="url(#cli-shine)" />
-  <!-- Title bar -->
   <rect x="14" y="14" width="212" height="26" rx="6" fill="#4a5363" />
   <circle cx="30" cy="27" r="5" fill="#ff5f57" />
   <circle cx="50" cy="27" r="5" fill="#febc2e" />
   <circle cx="70" cy="27" r="5" fill="#28c840" />
-  <!-- Screen -->
   <rect x="16" y="46" width="208" height="100" rx="8" fill="url(#cli-screen)" />
   <rect x="16" y="46" width="208" height="100" rx="8" fill="#000" fill-opacity="0.25" />
-  <!-- Subtle scanline hint -->
   <line x1="16" y1="96" x2="224" y2="96" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1" />
-  <!-- Prompt: >_ style (green / amber classic terminal) -->
   <g fill="none" stroke="#3ecf8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
     <path d="M 34 108 L 48 118 L 34 128" />
   </g>
   <rect x="56" y="114" width="72" height="8" rx="2" fill="#3ecf8e" fill-opacity="0.85" />
-  <!-- Cursor block -->
   <rect x="134" y="110" width="10" height="16" rx="1" fill="#7ee787" fill-opacity="0.9" />
 </svg>

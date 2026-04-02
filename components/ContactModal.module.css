@@ -14,6 +14,7 @@
   width: 100%;
   padding: 3em 2em;
   border: 6px solid var(--accent-3);
+  border-radius: 8px;
   background: rgba(0, 0, 0, 0.3);
   font-family: var(--font-ubuntu), Ubuntu, sans-serif;
   letter-spacing: 0.1em;
@@ -35,7 +36,7 @@
   margin-top: 1.5rem;
   padding: 0.5em 1.25em;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 0;
+  border-radius: 8px;
   --glass-bleed: -1px;
   background: color-mix(in srgb, var(--accent-4) 88%, transparent);
   color: #fff;

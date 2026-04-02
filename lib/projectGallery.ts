@@ -1,6 +1,5 @@
 import type { Project } from '@/stores/usePortfolioStore'
 
-/** Raster still images for cover (JPEG, PNG, WebP — not GIF). */
 export const isProjectCoverJpg = (filename: string) =>
   /\.(jpe?g|png|webp)$/i.test(filename)
 

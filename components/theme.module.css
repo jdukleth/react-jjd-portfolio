@@ -30,7 +30,6 @@
   background-color: var(--accent-4);
 }
 
-/* Dark, readable hover panel — light accent tint only (no heavy color wash). */
 .reveal1 {
   background: color-mix(in srgb, var(--accent-1) 16%, rgba(10, 12, 18, 0.94) 84%);
 }

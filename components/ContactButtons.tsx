@@ -17,7 +17,7 @@ const linkAriaLabel = (url: string) => {
     if (host.includes('github')) return 'GitHub profile (opens in a new tab)'
     if (host.includes('linkedin')) return 'LinkedIn profile (opens in a new tab)'
   } catch {
-    /* ignore invalid URL */
+    void 0
   }
   return 'External link (opens in a new tab)'
 }
@@ -66,7 +66,7 @@ export const ContactButtons = ({ nameplate }: { nameplate: Nameplate }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.btn} glassInteractive glassInteractiveRound`}
-                aria-label={linkAriaLabel(button.url)}
+                aria-label={linkAriaLabel(button.url ?? '')}
               >
                 <Icon size={32} />
               </a>

@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="JetBrains">
   <title>JetBrains</title>
-  <!-- JetBrains brand asset: https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg -->
   <linearGradient id="jb-a" gradientUnits="userSpaceOnUse" x1="32.64" x2="82.77" y1="61.16" y2="85.54"><stop offset=".21" stop-color="#fe2857"/><stop offset="1" stop-color="#293896"/></linearGradient>
   <linearGradient id="jb-b" gradientUnits="userSpaceOnUse" x1="17.38" x2="82.95" y1="69.86" y2="21.23"><stop offset="0" stop-color="#fe2857"/><stop offset=".01" stop-color="#fe2857"/><stop offset=".86" stop-color="#ff318c"/></linearGradient>
   <linearGradient id="jb-c" gradientUnits="userSpaceOnUse" x1="74.17" x2="160.27" y1="21.58" y2="99.76"><stop offset=".02" stop-color="#ff318c"/><stop offset=".21" stop-color="#fe2857"/><stop offset=".86" stop-color="#fdb60d"/></linearGradient>

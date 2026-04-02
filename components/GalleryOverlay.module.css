@@ -11,13 +11,7 @@
   font: inherit;
   border: 2px solid;
   border-radius: 8px;
-  /* Pull glass pseudo-elements over the 2px border (they’re positioned to the padding box) */
   --glass-bleed: -2px;
-}
-
-/* Beat .glassInteractive { border-radius: 0 } when global CSS order loads after this module */
-.openButton:global(.glassInteractive) {
-  border-radius: 8px;
 }
 
 .t1 {
