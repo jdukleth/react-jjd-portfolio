@@ -1,54 +1,17 @@
-.grid {
+.masonryGrid {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
+  margin-left: -2rem;
+  width: auto;
   margin-top: 1.25rem;
   padding-bottom: 1.5rem;
 }
 
-.cell {
-  flex: 1 1 calc(14.28% - 26px);
-  min-width: 220px;
-  max-width: 380px;
+.masonryColumn {
+  padding-left: 2rem;
+  background-clip: padding-box;
 }
 
-@media (max-width: 2600px) {
-  .cell {
-    flex-basis: calc(16.66% - 26px);
-  }
-}
-
-@media (max-width: 2200px) {
-  .cell {
-    flex-basis: calc(20% - 24px);
-  }
-}
-
-@media (max-width: 1800px) {
-  .cell {
-    flex-basis: calc(25% - 24px);
-  }
-}
-
-@media (max-width: 1400px) {
-  .cell {
-    flex-basis: calc(33.33% - 22px);
-  }
-}
-
-@media (max-width: 1000px) {
-  .cell {
-    flex-basis: calc(50% - 16px);
-    max-width: 520px;
-  }
-}
-
-@media (max-width: 640px) {
-  .cell {
-    flex-basis: 100%;
-    max-width: 480px;
-  }
+.item {
+  width: 100%;
+  margin-bottom: 2rem;
 }

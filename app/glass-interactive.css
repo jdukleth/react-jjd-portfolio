@@ -13,7 +13,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 0;
   transition:
     transform 0.22s cubic-bezier(0.34, 1.45, 0.64, 1),
     box-shadow 0.28s ease,
@@ -28,15 +28,11 @@
   border-radius: 50%;
 }
 
-/* Sharper corners than default 12px (projects gallery button, etc.) */
-.glassInteractive.glassInteractiveRadius8 {
-  border-radius: 8px;
-}
-
 .glassInteractive::before {
   content: "";
   position: absolute;
-  inset: 0;
+  /* Padding-box inset: extend by --glass-bleed (e.g. -2px) so shine covers borders */
+  inset: var(--glass-bleed, 0);
   border-radius: inherit;
   background: var(--glass-shine);
   opacity: 0;
@@ -48,7 +44,7 @@
 .glassInteractive::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: var(--glass-bleed, 0);
   border-radius: inherit;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
   opacity: 0;

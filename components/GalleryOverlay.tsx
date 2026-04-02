@@ -95,7 +95,7 @@ export const GalleryOverlay = ({
     <>
       <button
         type="button"
-        className={`${styles.openButton} ${styles[t]} glassInteractive glassInteractiveOutline glassInteractiveRadius8`}
+        className={`${styles.openButton} ${styles[t]} glassInteractive glassInteractiveOutline`}
         onClick={() => setOpen(true)}
       >
         <IconGallery size={28} />
@@ -104,10 +104,11 @@ export const GalleryOverlay = ({
       {open ? (
         <div className={styles.overlay}>
           <header className={styles.toolbar}>
-            <span className={styles.toolbarTitle}>
-              Scroll Down on Images
-            </span>
-            <span className={styles.toolbarSpacer} aria-hidden />
+            <div className={styles.toolbarLead}>
+              <span className={styles.toolbarTitle}>
+                Scroll Down on Images
+              </span>
+            </div>
             <div className={styles.toolbarPagination}>
               <button
                 type="button"
@@ -131,15 +132,16 @@ export const GalleryOverlay = ({
                 <IconChevronRight size={28} />
               </button>
             </div>
-            <span className={styles.toolbarSpacer} aria-hidden />
-            <button
-              type="button"
-              className={`${styles.iconBtn} glassInteractive glassInteractiveRound`}
-              aria-label="Close gallery"
-              onClick={() => setOpen(false)}
-            >
-              <IconClose size={28} />
-            </button>
+            <div className={styles.toolbarTrail}>
+              <button
+                type="button"
+                className={`${styles.iconBtn} glassInteractive glassInteractiveRound`}
+                aria-label="Close gallery"
+                onClick={() => setOpen(false)}
+              >
+                <IconClose size={28} />
+              </button>
+            </div>
           </header>
           <Gallery images={images} activeIndex={activeSlide} />
         </div>

@@ -24,6 +24,8 @@
   justify-content: center;
   padding: 1rem 2rem;
   border: 2px solid var(--accent-1);
+  border-radius: 0;
+  --glass-bleed: -2px;
   color: var(--accent-1);
   text-transform: uppercase;
   letter-spacing: 0.08em;

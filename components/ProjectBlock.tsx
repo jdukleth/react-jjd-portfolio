@@ -112,6 +112,7 @@ export const ProjectBlock = ({
                   alt=""
                   width={18}
                   height={18}
+                  unoptimized={skill.logo.endsWith('.svg')}
                   aria-hidden
                 />
                 <span>{skill.name}</span>

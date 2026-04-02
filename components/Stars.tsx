@@ -67,8 +67,8 @@ const buildStarConfigs = (count: number): StarConfig[] => {
 
 const starCountForViewport = (w: number, h: number): number => {
   const area = Math.max(0, w) * Math.max(0, h)
-  const n = Math.floor(area / 5250)
-  return Math.min(680, Math.max(144, n))
+  const n = Math.floor(area / 2625)
+  return Math.min(1360, Math.max(288, n))
 }
 
 export const Stars = () => {

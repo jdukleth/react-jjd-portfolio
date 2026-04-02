@@ -35,6 +35,8 @@
   margin-top: 1.5rem;
   padding: 0.5em 1.25em;
   border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0;
+  --glass-bleed: -1px;
   background: color-mix(in srgb, var(--accent-4) 88%, transparent);
   color: #fff;
   cursor: pointer;

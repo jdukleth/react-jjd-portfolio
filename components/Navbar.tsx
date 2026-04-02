@@ -28,10 +28,22 @@ export const Navbar = () => {
   const pathname = usePathname() || '/'
   const onNavIntent = useNavigationIntent()
   const [hoveredHref, setHoveredHref] = useState<string | null>(null)
+  const [navPending, setNavPending] = useState<{
+    from: string
+    to: string
+  } | null>(null)
 
   const activeTabHref =
     tabs.find((t) => isActive(pathname, t.href))?.href ?? '/'
-  const emphasizedHref = hoveredHref ?? activeTabHref
+
+  const pendingEmphasis =
+    navPending !== null &&
+    pathname === navPending.from &&
+    !isActive(pathname, navPending.to)
+      ? navPending.to
+      : null
+
+  const emphasizedHref = hoveredHref ?? pendingEmphasis ?? activeTabHref
 
   return (
     <nav
@@ -52,7 +64,10 @@ export const Navbar = () => {
             suppressHydrationWarning
             aria-current={routeActive ? 'page' : undefined}
             onClick={() => {
-              if (!routeActive) onNavIntent()
+              if (!routeActive) {
+                setNavPending({ from: pathname, to: href })
+                onNavIntent()
+              }
               queueMicrotask(() => {
                 document.getElementById('main-scroll')?.focus({
                   preventScroll: true,
@@ -63,7 +78,6 @@ export const Navbar = () => {
             className={`${styles.tab} ${emphasized ? styles.tabEmphasized : styles.tabInactive} ${routeActive && emphasized ? styles.routeEmphasized : ''}`}
           >
             <span className={styles.tabCluster}>
-              <span className={styles.glassPanel} aria-hidden />
               <Icon size={22} />
               <span className={styles.tabLabel}>{label}</span>
             </span>

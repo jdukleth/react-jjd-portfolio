@@ -148,8 +148,8 @@ export const projects = [
         logo: 'lumen.png'
       },
       {
-        name: 'Apigility',
-        logo: 'apigility.png'
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
@@ -266,8 +266,8 @@ export const projects = [
         logo: 'php.png'
       },
       {
-        name: 'Apigility',
-        logo: 'apigility.png'
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
@@ -303,8 +303,8 @@ export const projects = [
         logo: 'php.png'
       },
       {
-        name: 'Apigility',
-        logo: 'apigility.png'
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
@@ -345,8 +345,8 @@ export const projects = [
         logo: 'php.png'
       },
       {
-        name: 'Apigility',
-        logo: 'apigility.png'
+        name: 'REST API',
+        logo: 'rest-api.svg'
       },
       {
         name: 'AJAX',
