@@ -105,13 +105,14 @@ export const ProjectBlock = ({
           <h4 className={styles.sub}>{data.developedFor}</h4>
           <p className={styles.description}>{data.description}</p>
           <div className={styles.chips}>
-            {data.skills.map((skill, index) => (
-              <div key={index} className={styles.chip}>
+            {data.skills.map((skill) => (
+              <div key={`${skill.name}-${skill.logo}`} className={styles.chip}>
                 <Image
                   src={`/images/skills-logos/${skill.logo}`}
                   alt=""
                   width={18}
                   height={18}
+                  aria-hidden
                 />
                 <span>{skill.name}</span>
               </div>

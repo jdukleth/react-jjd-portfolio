@@ -6,7 +6,10 @@ export const ProjectsBlocks = ({ projects }: { projects: Project[] }) => {
   return (
     <div className={styles.wrap}>
       {projects.map((project, index) => (
-        <div key={index} className={styles.block}>
+        <div
+          key={`${project.name}-${project.developedFor}-${index}`}
+          className={styles.block}
+        >
           <ProjectBlock
             data={project}
             orientation={index % 2 ? 'last' : 'first'}

@@ -10,6 +10,7 @@
   background: transparent;
   font: inherit;
   border: 2px solid;
+  border-radius: 8px;
 }
 
 .t1 {
@@ -49,15 +50,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.25rem;
+  min-width: 0;
   padding: 0.75rem 1rem;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
 .toolbarTitle {
+  flex-shrink: 0;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.toolbarSpacer {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.toolbarPagination {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.125rem;
+}
+
+.toolbarCount {
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
 }
 
 .iconBtn {
@@ -69,4 +92,20 @@
   background: transparent;
   color: #fff;
   cursor: pointer;
+}
+
+.iconBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 599px) {
+  .toolbarTitle,
+  .toolbarSpacer {
+    display: none;
+  }
+
+  .toolbar {
+    justify-content: space-between;
+  }
 }

@@ -28,6 +28,11 @@
   border-radius: 50%;
 }
 
+/* Sharper corners than default 12px (projects gallery button, etc.) */
+.glassInteractive.glassInteractiveRadius8 {
+  border-radius: 8px;
+}
+
 .glassInteractive::before {
   content: "";
   position: absolute;
