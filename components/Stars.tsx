@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  memo,
   startTransition,
   useCallback,
   useEffect,
@@ -65,13 +66,17 @@ const buildStarConfigs = (count: number): StarConfig[] => {
   })
 }
 
+const STAR_DENSITY_DIVISOR = 2625
+const STAR_COUNT_SCALE = 0.7
+
 const starCountForViewport = (w: number, h: number): number => {
   const area = Math.max(0, w) * Math.max(0, h)
-  const n = Math.floor(area / 2625)
-  return Math.min(1360, Math.max(288, n))
+  const n = Math.floor(area / STAR_DENSITY_DIVISOR)
+  const capped = Math.min(1360, Math.max(288, n))
+  return Math.max(1, Math.floor(capped * STAR_COUNT_SCALE))
 }
 
-export const Stars = () => {
+const StarsInner = () => {
   const [stars, setStars] = useState<StarConfig[]>([])
 
   const readStars = useCallback((urgent: boolean) => {
@@ -129,3 +134,7 @@ export const Stars = () => {
     </div>
   )
 }
+
+StarsInner.displayName = 'Stars'
+
+export const Stars = memo(StarsInner)

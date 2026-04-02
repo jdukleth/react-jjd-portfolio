@@ -36,14 +36,10 @@
   border-radius: 50%;
   transform: translate3d(-50%, -50%, var(--z0, -1200px));
   transform-origin: center center;
-  transform-style: preserve-3d;
   pointer-events: none;
   background: hsl(0 0% var(--light, 92%));
   box-shadow: 0 0 var(--glow, 2px) rgba(255, 255, 255, var(--glow-a, 0.45));
-  animation-name: hyperspace;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  backface-visibility: hidden;
+  animation: hyperspace linear infinite;
 }
 
 @keyframes hyperspace {
