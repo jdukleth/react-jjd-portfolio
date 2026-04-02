@@ -42,7 +42,7 @@
 
 .card:hover .reveal {
   clip-path: inset(0 0 0 0);
-  opacity: 0.9;
+  opacity: 1;
   pointer-events: auto;
 }
 
@@ -54,10 +54,11 @@
 }
 
 .reveal li {
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.35;
+  color: #f0f3f8;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  text-shadow: none;
 }
 
 .body {

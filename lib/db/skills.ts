@@ -19,8 +19,8 @@ export const skills = [
       }
     ],
     uses: [
-      'aviation ops maps and rules',
-      'wholesale ecomm admin interfaces',
+      'aviation ops work',
+      'wholesale ecommerce & admin',
       '5x e-commerce platform',
       '2x rentals & exchange program',
       '4x advanced configurators',
