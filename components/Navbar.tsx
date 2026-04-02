@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, type CSSProperties } from 'react'
 import styles from './Navbar.module.css'
 import { useNavigationIntent } from '@/components/NavigationProgress'
 import {
@@ -13,10 +13,30 @@ import {
 } from '@/components/icons'
 
 const tabs = [
-  { href: '/', label: 'Nameplate', Icon: IconAccountCard },
-  { href: '/skills', label: 'Skills', Icon: IconCodeTags },
-  { href: '/projects', label: 'Projects', Icon: IconHammer },
-  { href: '/resume', label: 'Resume', Icon: IconBriefcase },
+  {
+    href: '/',
+    label: 'Nameplate',
+    Icon: IconAccountCard,
+    tintVar: '--accent-4' as const,
+  },
+  {
+    href: '/skills',
+    label: 'Skills',
+    Icon: IconCodeTags,
+    tintVar: '--accent-3' as const,
+  },
+  {
+    href: '/projects',
+    label: 'Projects',
+    Icon: IconHammer,
+    tintVar: '--accent-2' as const,
+  },
+  {
+    href: '/resume',
+    label: 'Resume',
+    Icon: IconBriefcase,
+    tintVar: '--accent-1' as const,
+  },
 ]
 
 const isActive = (pathname: string, href: string) => {
@@ -52,7 +72,7 @@ export const Navbar = () => {
       onMouseLeave={() => setHoveredHref(null)}
       suppressHydrationWarning
     >
-      {tabs.map(({ href, label, Icon }) => {
+      {tabs.map(({ href, label, Icon, tintVar }) => {
         const routeActive = isActive(pathname, href)
         const emphasized = href === emphasizedHref
 
@@ -62,6 +82,9 @@ export const Navbar = () => {
             href={href}
             prefetch
             suppressHydrationWarning
+            style={
+              { '--tab-glass-tint': `var(${tintVar})` } as CSSProperties
+            }
             aria-current={routeActive ? 'page' : undefined}
             onClick={() => {
               if (!routeActive) {

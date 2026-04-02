@@ -100,10 +100,10 @@ export const projects = [
     name: 'Aviation Ops Platform',
     developedFor: 'Vellox Group',
     cover: {
-      pic: 'vellox-01.svg',
+      pic: 'vellox-01.webp',
       position: 'center'
     },
-    gallery: ['vellox-01.svg', 'vellox-03.png'],
+    gallery: ['vellox-01.webp', 'vellox-02.webp', 'vellox-03.webp'],
     description: [
       'Worked as a team in a highly collaborative, Agile environment with Jira at its core.',
       'Worked on flight tracking, operational control center, dispatch, aircraft stats, weather systems, pilot trackables, aviation map, duty times, maintenance, report generation, and more.',
