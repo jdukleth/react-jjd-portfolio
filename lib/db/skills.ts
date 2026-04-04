@@ -122,6 +122,38 @@ export const skills = [
     ]
   },
   {
+    name: 'AI + Experience',
+    logo: 'cursor.svg',
+    years: '',
+    themeClass: 'gradient3',
+    skillItems: [
+      {
+        logo: 'cursor.svg',
+        name: 'Cursor'
+      },
+      {
+        logo: 'claude-code.svg',
+        name: 'Claude Code'
+      },
+      {
+        logo: 'command-line.svg',
+        name: 'Command Line'
+      },
+      {
+        logo: 'visual-code.png',
+        name: 'VS Code'
+      }
+    ],
+    uses: [
+      'started w/ guilds & locals',
+      'survived the browser wars',
+      'upgraded to enterprise work',
+      'upskilled in AI',
+      'looking for my next big thing',
+      "let's build incredible works together"
+    ]
+  },
+  {
     name: 'Agile DevOps',
     logo: 'git.png',
     years: '',
@@ -212,37 +244,6 @@ export const skills = [
       'resource/request optimization',
       'image manipulation',
       'accessibility'
-    ]
-  },
-  {
-    name: 'Code Crafting',
-    logo: 'command-line.svg',
-    years: '',
-    themeClass: 'gradient3',
-    skillItems: [
-      {
-        logo: 'cursor.svg',
-        name: 'Cursor'
-      },
-      {
-        logo: 'command-line.svg',
-        name: 'Command Line'
-      },
-      {
-        logo: 'visual-code.png',
-        name: 'VS Code'
-      },
-      {
-        logo: 'jetbrains.svg',
-        name: 'JetBrains'
-      }
-    ],
-    uses: [
-      'started w/ guilds & locals',
-      'survived the browser wars',
-      'upgraded to enterprise work',
-      'looking for my next big thing',
-      "let's build incredible works together"
     ]
   },
   {
