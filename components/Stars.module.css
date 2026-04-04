@@ -7,17 +7,13 @@
   contain: paint;
 }
 
-.scene {
+.canvas {
   position: absolute;
   inset: 0;
-  perspective: 360px;
-  perspective-origin: 50% 50%;
-}
-
-.field {
-  position: absolute;
-  inset: 0;
-  transform-style: preserve-3d;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .overlay {
@@ -26,46 +22,4 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
   pointer-events: none;
-}
-
-.star {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  transform: translate3d(-50%, -50%, var(--z0, -1200px));
-  transform-origin: center center;
-  pointer-events: none;
-  background: hsl(0 0% var(--light, 92%));
-  box-shadow: 0 0 var(--glow, 2px) rgba(255, 255, 255, var(--glow-a, 0.45));
-  animation: hyperspace linear infinite;
-}
-
-@keyframes hyperspace {
-  0% {
-    opacity: 0;
-    transform: translate3d(-50%, -50%, var(--z0, -1200px));
-  }
-
-  6% {
-    opacity: var(--peak-o, 0.95);
-  }
-
-  88% {
-    opacity: var(--peak-o, 0.95);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate3d(-50%, -50%, var(--z1, 320px));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .star {
-    animation: none;
-    opacity: var(--peak-o, 0.45);
-    transform: translate3d(-50%, -50%, -400px);
-  }
 }
