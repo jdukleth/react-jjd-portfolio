@@ -44,3 +44,7 @@
   font: inherit;
   letter-spacing: 0.08em;
 }
+
+.close:global(.glassInteractive):hover {
+  transform: none;
+}

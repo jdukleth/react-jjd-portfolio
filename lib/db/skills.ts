@@ -42,11 +42,11 @@ export const skills = [
       },
       {
         logo: 'socketio.png',
-        name: 'Socket.io'
+        name: 'Websockets'
       },
       {
-        logo: 'bun.png',
-        name: 'Bun'
+        logo: 'auth.svg',
+        name: 'Authentication'
       }
     ],
     uses: [
@@ -214,7 +214,7 @@ export const skills = [
   },
   {
     name: 'Design & Code',
-    logo: 'photoshop.png',
+    logo: 'css3.svg',
     years: '',
     themeClass: 'gradient1',
     skillItems: [
