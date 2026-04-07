@@ -66,16 +66,16 @@ const aviationOpsPlaceholderSkills = [
 
 const wholesaleEcommercePlaceholderSkills = [
   {
+    name: 'React / Next.js',
+    logo: 'react.png'
+  },
+  {
     name: 'Node.js',
     logo: 'node.png'
   },
   {
     name: 'PHP',
     logo: 'php.png'
-  },
-  {
-    name: 'React / Next.js',
-    logo: 'react.png'
   },
   {
     name: 'SQL',
@@ -382,16 +382,8 @@ export const projects = [
         logo: 'nginx.png'
       },
       {
-        name: 'Node.js',
-        logo: 'node.png'
-      },
-      {
         name: 'REST API',
         logo: 'rest-api.svg'
-      },
-      {
-        name: 'AJAX',
-        logo: 'ajax.png'
       },
       {
         name: 'Git',
