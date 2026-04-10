@@ -170,6 +170,10 @@ export const skills = [
       {
         logo: 'jira.svg',
         name: 'Jira'
+      },
+      {
+        logo: 'aws.png',
+        name: 'AWS'
       }
     ],
     uses: [
@@ -181,17 +185,17 @@ export const skills = [
   },
   {
     name: 'Deployment',
-    logo: 'aws.png',
+    logo: 'nginx.png',
     years: '',
     themeClass: 'gradient2',
     skillItems: [
       {
-        logo: 'aws.png',
-        name: 'AWS EC2'
-      },
-      {
         logo: 'nginx.png',
         name: 'Nginx'
+      },
+      {
+        logo: 'docker.png',
+        name: 'Docker'
       },
       {
         logo: 'apache.png',
