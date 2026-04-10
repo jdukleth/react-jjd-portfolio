@@ -185,7 +185,7 @@ export const skills = [
   },
   {
     name: 'Deployment',
-    logo: 'nginx.png',
+    logo: 'cloud.svg',
     years: '',
     themeClass: 'gradient2',
     skillItems: [
