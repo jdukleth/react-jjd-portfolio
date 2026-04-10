@@ -122,3 +122,15 @@
   outline-offset: 3px;
   z-index: 2;
 }
+
+@media (max-width: 700px) {
+  .tabCluster {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding-inline: 4px;
+  }
+  .tabLabel {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
