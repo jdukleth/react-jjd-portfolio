@@ -1,7 +1,7 @@
 export const skills = [
   {
-    name: 'JavaScript',
-    logo: 'javascript.png',
+    name: 'JavaScript / TypeScript',
+    logo: 'javascript-typescript.png',
     years: '13 industry years',
     themeClass: 'gradient4',
     skillItems: [

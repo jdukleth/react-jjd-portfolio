@@ -1,0 +1,106 @@
+[1mdiff --git a/lib/db/projects.ts b/lib/db/projects.ts[m
+[1mindex 0cf6c6d..8b66778 100644[m
+[1m--- a/lib/db/projects.ts[m
+[1m+++ b/lib/db/projects.ts[m
+[36m@@ -270,8 +270,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[36m@@ -410,8 +410,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[36m@@ -495,8 +495,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[36m@@ -535,8 +535,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[36m@@ -578,8 +578,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[36m@@ -614,8 +614,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'PHP',[m
+[36m@@ -650,8 +650,8 @@[m [mexport const projects = [[m
+     ],[m
+     skills: [[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[36m@@ -699,8 +699,8 @@[m [mexport const projects = [[m
+         logo: 'photoshop.png'[m
+       },[m
+       {[m
+[31m-        name: 'JavaScript',[m
+[31m-        logo: 'javascript.png'[m
+[32m+[m[32m        name: 'JavaScript / TypeScript',[m
+[32m+[m[32m        logo: 'javascript-typescript.png'[m
+       },[m
+       {[m
+         name: 'SQL',[m
+[1mdiff --git a/lib/db/skills.ts b/lib/db/skills.ts[m
+[1mindex 0b1b0f7..85f050e 100644[m
+[1m--- a/lib/db/skills.ts[m
+[1m+++ b/lib/db/skills.ts[m
+[36m@@ -1,7 +1,7 @@[m
+ export const skills = [[m
+   {[m
+[31m-    name: 'JavaScript',[m
+[31m-    logo: 'javascript.png',[m
+[32m+[m[32m    name: 'JavaScript / TypeScript',[m
+[32m+[m[32m    logo: 'javascript-typescript.png',[m
+     years: '13 industry years',[m
+     themeClass: 'gradient4',[m
+     skillItems: [[m
