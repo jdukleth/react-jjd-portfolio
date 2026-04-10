@@ -21,36 +21,15 @@ type PortfolioState = {
   hydrate: () => Promise<void>;
 };
 
-export const usePortfolioStore = create<PortfolioState>((set, get) => ({
-  nameplate: null,
-  skills: null,
-  projects: null,
-  resume: null,
-  loadState: 'idle',
+export const usePortfolioStore = create<PortfolioState>((set) => ({
+  nameplate: nameplate,
+  skills: skills,
+  projects: projects,
+  resume: resume,
+  loadState: 'ready',
   error: null,
 
   hydrate: async () => {
-    if (get().loadState === 'ready' || get().loadState === 'loading') return
-    set({ loadState: 'loading', error: null })
-    try {
-      const [np, sk, pr, re] = await Promise.all([
-        fetch('/api/nameplate').then((r) => r.json()),
-        fetch('/api/skills').then((r) => r.json()),
-        fetch('/api/projects').then((r) => r.json()),
-        fetch('/api/resume').then((r) => r.json()),
-      ])
-      set({
-        nameplate: np,
-        skills: sk,
-        projects: pr,
-        resume: re,
-        loadState: 'ready',
-      })
-    } catch (e) {
-      set({
-        loadState: 'error',
-        error: e instanceof Error ? e.message : 'Failed to load',
-      })
-    }
+    set({ loadState: 'ready' })
   },
 }))

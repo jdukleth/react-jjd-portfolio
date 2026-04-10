@@ -7,7 +7,11 @@ import { Fullscreen } from '@/components/Fullscreen'
 import { Navbar } from '@/components/Navbar'
 import { NavigationProgressProvider } from '@/components/NavigationProgress'
 import { PortfolioProvider } from '@/components/PortfolioProvider'
-import { Stars } from '@/components/Stars'
+import dynamic from 'next/dynamic'
+
+const Stars = dynamic(() => import('@/components/Stars').then((m) => m.Stars), {
+  ssr: false,
+})
 
 const MainScrollPane = ({ children }: { children: React.ReactNode }) => {
   const mainRef = useRef<HTMLElement>(null)
